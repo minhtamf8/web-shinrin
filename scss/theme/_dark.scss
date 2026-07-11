@@ -1,4 +1,4 @@
-@use "../abstracts";
+/*@use "../abstracts";
 
 html.dark {
     --text-color: #fff;
@@ -119,4 +119,204 @@ html.dark {
 
     // Separate
     --separate-color: #292e39;
+}*/
+
+@use "../abstracts";
+
+html.dark {
+    // =========================
+    // TEXT
+    // =========================
+
+    --text-color: var(--text-color);
+    --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7482%) hue-rotate(72deg) brightness(99%)
+        contrast(99%);
+
+    // =========================
+    // BODY
+    // =========================
+
+    --body-bg: var(--bg-color);
+
+    // =========================
+    // HEADER
+    // =========================
+
+    --header-bg-color: var(--surface-secondary);
+    --footer-bg-color: var(--header-bg-color);
+    --footer-text-color: var(--text-muted);
+
+    @include abstracts.screen(lg) {
+        --header-shadow-color: var(--shadow-sm);
+    }
+
+    // =========================
+    // TOP ACTION
+    // =========================
+
+    --top-act-group-bg-color: var(--bg-color);
+    --top-act-group-shadow: var(--shadow-sm);
+    --top-act-group-separate: var(--border-color);
+
+    // =========================
+    // HEADER DROPDOWN
+    // =========================
+
+    --header-act-dropdown-bg: var(--surface-color);
+    --header-act-dropdown-shadow: var(--shadow-lg);
+    --header-act-dropdown-border-color: var(--border-color);
+
+    // =========================
+    // DROPDOWN
+    // =========================
+
+    --dropdown-bg-color: var(--surface-color);
+    --dropdown-shadow-color: var(--shadow-lg);
+
+    --dropdown-arrow-color: brightness(0) saturate(100%) invert(17%) sepia(27%) saturate(487%) hue-rotate(185deg)
+        brightness(89%) contrast(88%);
+
+    --top-menu-border-color: var(--border-color);
+
+    --menu-column-icon-color: brightness(0) saturate(100%) invert(95%) sepia(6%) saturate(527%) hue-rotate(180deg)
+        brightness(107%) contrast(96%);
+
+    // =========================
+    // SIDEBAR
+    // =========================
+
+    --sidebar-bg: var(--bg-color);
+    --sidebar-shadow: var(--shadow-lg);
+
+    // =========================
+    // CATEGORY
+    // =========================
+
+    --cate-item-bg: var(--surface-secondary);
+    --cate-item-thumb-bg: var(--bg-color);
+    --cate-item-title-color: var(--text-color);
+
+    // =========================
+    // BUTTON
+    // =========================
+
+    --filter-btn-color: var(--text-color);
+    --filter-btn-bg: var(--surface-secondary);
+
+    // =========================
+    // PRODUCT CARD
+    // =========================
+
+    --product-card-bg: var(--surface-secondary);
+    --product-card-shadow: var(--shadow-md);
+
+    // =========================
+    // FILTER FORM
+    // =========================
+
+    --filter-form-bg: var(--dropdown-bg-color);
+    --filter-form-shadow: var(--shadow-lg);
+    --form-tag-bg: var(--surface-secondary);
+    --filter-form-arrow: var(--dropdown-arrow-color);
+
+    // =========================
+    // AUTH
+    // =========================
+
+    --auth-content-bg: var(--bg-color);
+    --auth-intro-bg: var(--surface-secondary);
+    --auth-intro-text-color: var(--text-muted);
+    --auth-heading-color: var(--text-muted);
+
+    // =========================
+    // FORM
+    // =========================
+
+    --form-placeholder-color: var(--text-muted);
+    --form-select-dialog-shadow: var(--shadow-md);
+    --form-select-dialog-bg: var(--surface-color);
+    --form-option-hover-bg: var(--bg-color);
+
+    // =========================
+    // PRODUCT DETAIL
+    // =========================
+
+    --product-detail-bg: var(--bg-color);
+    --product-detail-info-bg: var(--surface-secondary);
+    --product-detail-info-content-bg: transparent;
+    --product-detail-tag-bg: var(--bg-color);
+
+    @include abstracts.screen(md) {
+        --product-detail-bg: var(--bg-color);
+        --product-detail-info-bg: transparent;
+        --product-detail-info-content-bg: var(--surface-secondary);
+    }
+
+    // =========================
+    // BREADCRUMBS
+    // =========================
+
+    --breadcrumbs-bg: var(--surface-secondary);
+    --breadcrumbs-shadow: var(--shadow-sm);
+
+    @include abstracts.screen(md) {
+        --breadcrumbs-bg: var(--surface-secondary);
+    }
+
+    // =========================
+    // SEARCH BAR
+    // =========================
+
+    --search-bar-bg: var(--surface-secondary);
+
+    // =========================
+    // REVIEW
+    // =========================
+
+    --review-card-bg: var(--surface-secondary);
+
+    // =========================
+    // TEXT CONTENT
+    // =========================
+
+    --text-content-hr-bg: var(--border-color);
+
+    // =========================
+    // CHECKOUT
+    // =========================
+
+    --checkout-breadcrumbs-bg: var(--surface-secondary);
+    --checkout-cart-info-bg: var(--surface-secondary);
+    --checkout-cart-info-shadow: var(--shadow-md);
+    --checkout-border-color: var(--border-color);
+    --checkout-gift-shadow: var(--shadow-sm);
+    --checkout-payment-item-bg: var(--bg-color);
+
+    // =========================
+    // DIALOG
+    // =========================
+
+    --dialog-bg: var(--surface-color);
+    --dialog-shadow: var(--shadow-lg);
+
+    // =========================
+    // PROFILE
+    // =========================
+
+    --profile-sidebar-bg: var(--surface-secondary);
+    --profile-sidebar-shadow: var(--shadow-md);
+    --profile-sidebar-link-hover: var(--surface-color);
+
+    // =========================
+    // ACCOUNT INFO
+    // =========================
+
+    --account-info-bg: var(--bg-color);
+    --account-info-icon-bg: var(--surface-secondary);
+
+    // =========================
+    // SEPARATE
+    // =========================
+
+    --separate-color: var(--border-color);
 }

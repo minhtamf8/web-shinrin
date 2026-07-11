@@ -4,8 +4,9 @@
 
 :root {
     --primary-color: #5f9f7f;
-    --primary-light: #7ab896;
-    --primary-dark: #4d8668;
+    --primary-hover: #4d8668;
+    --primary-dark: #355e4a;
+    --primary-light: #a9d1bb;
 
     // =========================
     // TEXT
@@ -19,15 +20,15 @@
     // BACKGROUND
     // =========================
 
-    --bg-color: #ffffff;
-    --surface-color: #f8f8f8;
+    --bg-color: #faf7ef;
+    --surface-color: #d91919;
     --surface-secondary: #f2f5f3;
 
     // =========================
     // BORDER
     // =========================
 
-    --border-color: #e6e6e6;
+    --border-color: #e9e5dc;
 
     // =========================
     // STATE
@@ -36,10 +37,4 @@
     --success-color: #3ba55c;
     --warning-color: #d9a441;
     --danger-color: #d95c5c;
-
-    // =========================
-    // SHADOW
-    // =========================
-
-    --shadow-color: rgba(0, 0, 0, 0.08);
 }

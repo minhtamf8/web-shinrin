@@ -1,43 +1,39 @@
-// =========================
-// FONT FAMILY
-// =========================
+:root {
+    // =========================
+    // FONT SIZE
+    // =========================
 
-$font-primary: "Gordita", sans-serif;
+    --text-xs: 1.2rem;
+    --text-sm: 1.4rem;
+    --text-base: 1.6rem;
+    --text-md: 1.8rem;
+    --text-lg: 2rem;
+    --text-xl: 2.4rem;
+    --text-2xl: 3rem;
+    --text-3xl: 4rem;
 
-// =========================
-// FONT SIZE
-// =========================
+    // =========================
+    // FONT WEIGHT
+    // =========================
 
-$text-xs: 1.2rem;
-$text-sm: 1.4rem;
-$text-base: 1.6rem;
-$text-md: 1.8rem;
-$text-lg: 2rem;
-$text-xl: 2.4rem;
-$text-2xl: 3rem;
-$text-3xl: 4rem;
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
 
-// =========================
-// FONT WEIGHT
-// =========================
+    // =========================
+    // LINE HEIGHT
+    // =========================
 
-$weight-regular: 400;
-$weight-medium: 500;
-$weight-semibold: 600;
-$weight-bold: 700;
+    --leading-tight: 1.2;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.7;
 
-// =========================
-// LINE HEIGHT
-// =========================
+    // =========================
+    // LETTER SPACING
+    // =========================
 
-$leading-tight: 1.2;
-$leading-normal: 1.5;
-$leading-relaxed: 1.7;
-
-// =========================
-// LETTER SPACING
-// =========================
-
-$tracking-tight: -0.02em;
-$tracking-normal: 0;
-$tracking-wide: 0.02em;
+    --tracking-tight: -0.02em;
+    --tracking-normal: 0;
+    --tracking-wide: 0.02em;
+}
