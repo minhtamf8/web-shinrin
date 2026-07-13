@@ -1,3 +1,4 @@
+/*
 $breakpoints: (
     xxl: 1400px,
     xl: 1200px,
@@ -8,7 +9,11 @@ $breakpoints: (
 $display-values: block, flex, grid, none;
 
 @mixin make-display($breakpoint: null) {
-    $infix: if($breakpoint, "-#{$breakpoint}", "");
+    $infix: "";
+
+    @if $breakpoint {
+        $infix: "-#{$breakpoint}";
+    }
 
     @each $display in $display-values {
         .d#{$infix}-#{$display} {
@@ -24,3 +29,4 @@ $display-values: block, flex, grid, none;
         @include make-display($breakpoint);
     }
 }
+*/

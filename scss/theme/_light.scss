@@ -1,325 +1,261 @@
-/*@use "../abstracts";
+@use "../abstracts";
+
+// BRAND
+// Màu nhận diện thương hiệu ShinRin
+// Dùng cho Button, Link, CTA, Active, Highlight...
+// =========================// =========================// =========================
+$primary-color: #5f9f7f; // Màu thương hiệu chính (Button, Link, Active)
+$primary-hover: #4d8668; // Hover cho Button và Link
+$primary-dark: #355e4a; // Heading nổi bật, Footer, nền tối
+$primary-light: #a9d1bb; // Background nhẹ, Badge, Tag, Hover nhẹ
+
+// TEXT
+// Màu chữ trong toàn bộ website
+// =========================// =========================// =========================
+
+$text-color: #1a162e; // Nội dung chính, Heading
+$text-light: #6c6c72; // Nội dung phụ, Description
+$text-muted: #9b9ba5; // Placeholder, Disabled, Caption
+
+// BACKGROUND
+// Màu nền của website
+// =========================// =========================// =========================
+
+$bg-color: #f5f3ed; // Màu nền toàn website (Body)
+$surface-color: #f8f8f8; // Nền Card, Form, Product Card
+$surface-secondary: #f2f5f3; // Nền Section xen kẽ, Hover, Box phụ
+
+// BORDER
+// =========================// =========================// =========================
+
+$border-color: #e9e5dc; // Viền Card, Input, Divider
+
+// STATE
+// Màu trạng thái
+// =========================// =========================// =========================
+
+$success-color: #3ba55c; // Thành công, Đặt hàng thành công
+$warning-color: #d9a441; // Cảnh báo, Sắp hết hàng
+$danger-color: #d95c5c; // Lỗi, Xóa sản phẩm, Validation
+// =========================// =========================// =========================// =========================
+
+// SPACING
+// Khoảng cách chuẩn của Design System
+// Dùng cho margin, padding, gap
+// =========================// =========================// =========================
+
+$space-2: 0.2rem; // Khoảng cách siêu nhỏ
+$space-4: 0.4rem; // Icon
+$space-6: 0.6rem; // Label nhỏ
+$space-8: 0.8rem; // Input nhỏ
+$space-10: 1rem; // Padding nhỏ
+$space-12: 1.2rem; // Button nhỏ
+$space-16: 1.6rem; // Khoảng cách phổ biến
+$space-20: 2rem; // Card
+$space-24: 2.4rem; // Section nhỏ
+$space-32: 3.2rem; // Block
+$space-40: 4rem; // Hero Content
+$space-48: 4.8rem; // Section
+$space-64: 6.4rem; // Khoảng cách lớn
+
+// RADIUS
+// Độ bo góc
+// =========================// =========================// =========================
+
+$radius-sm: 6px; // Input nhỏ
+$radius-md: 12px; // Card, Button
+$radius-lg: 16px; // Product Card
+$radius-xl: 24px; // Hero Card, Banner
+$radius-pill: 999px; // Pill Button, Badge
+
+// SHADOW
+// Đổ bóng
+// =========================// =========================// =========================
+
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04); // Input, Badge
+$shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06); // Card
+$shadow-lg: 0 10px 24px rgba(0, 0, 0, 0.08); // Modal, Hero Product
+
+// SHADOW COLORS
+$shadow-surface: rgba(237, 237, 246, 0.2);
+$shadow-floating: rgba(200, 200, 200, 0.4);
+
+// TRANSITION
+// Hiệu ứng chuyển động
+// =========================// =========================// =========================
+
+$transition-fast: 0.2s ease; // Hover Icon
+$transition-base: 0.3s ease; // Button, Card
+$transition-slow: 0.45s ease; // Hero Animation, Modal
+
+// Z-INDEX
+// Thứ tự hiển thị
+// =========================// =========================// =========================
+
+$z-dropdown: 100; // Dropdown Menu
+$z-sticky: 200; // Header Sticky
+$z-overlay: 300; // Overlay
+$z-modal: 400; // Modal
+$z-toast: 500; // Toast Notification
+
+// =========================// =========================// =========================// =========================
+
+// FONT SIZE
+// =========================// =========================// =========================
+
+$text-xs: 1.2rem; // Caption
+$text-sm: 1.4rem; // Small Text
+$text-base: 1.6rem; // Body
+$text-md: 1.8rem; // Description lớn
+$text-lg: 2rem; // Subtitle
+$text-xl: 2.4rem; // Section Title
+$text-2xl: 3rem; // Hero Sub Heading
+$text-3xl: 4rem; // Hero Heading
+
+// FONT WEIGHT
+// =========================// =========================// =========================
+
+$weight-regular: 400; // Nội dung thường
+$weight-medium: 500; // Menu, Button
+$weight-semibold: 600; // Subtitle
+$weight-bold: 700; // Heading
+
+// LINE HEIGHT
+// =========================// =========================// =========================
+
+$leading-tight: 1.2; // Heading
+$leading-normal: 1.5; // Nội dung
+$leading-relaxed: 1.7; // Blog, News
+
+// LETTER SPACING
+// =========================// =========================// =========================
+
+$tracking-tight: -0.02em; // Hero Heading
+$tracking-normal: 0; // Body
+$tracking-wide: 0.02em; // Button, Label, Menu
+// =========================// =========================// =========================// =========================
 
 html {
-    --text-color: #1a162e;
+    --text-color: green;
+
     --icon-color: brightness(0) saturate(100%) invert(8%) sepia(10%) saturate(4042%) hue-rotate(212deg) brightness(90%)
         contrast(95%);
 
-    --body-bg: #f6f6f6;
-    --header-bg-color: #eee;
-    --footer-bg-color: var(--header-bg-color);
+    --body-bg: red;
+    --header-bg-color: $surface-secondary;
+    --footer-bg-color: $surface-secondary;
 
-    --top-act-group-bg-color: #fff;
-    --top-act-group-shadow: rgba(237, 237, 246, 0.2);
-    --top-act-group-separate: #ededf6;
+    --top-act-group-bg-color: $surface-color;
+    --top-act-group-shadow: $shadow-surface;
+    --top-act-group-separate: $surface-secondary;
 
     @include abstracts.screen(lg) {
-        --header-bg-color: #fff;
-        --header-shadow-color: rgba(237, 237, 246, 0.2);
+        --header-bg-color: $surface-color;
+        --header-shadow-color: $shadow-surface;
     }
 
     // Header
-    --header-act-dropdown-bg: #fff;
-    --header-act-dropdown-shadow: rgba(200, 200, 200, 0.4);
-    --header-act-dropdown-border-color: #d2d1d6;
+    --header-act-dropdown-bg: $surface-color;
+    --header-act-dropdown-shadow: $shadow-floating;
+    --header-act-dropdown-border-color: $border-color;
 
     // Dropdown
-    --dropdown-bg-color: #fff;
-    --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
-    --top-menu-border-color: #d2d1d6;
+    --dropdown-bg-color: $surface-color;
+    --dropdown-shadow-color: $shadow-floating;
+    --top-menu-border-color: $border-color;
 
     // Sidebar
-    --sidebar-bg: #fff;
-    --sidebar-shadow: rgba(200, 200, 200, 0.4);
+    --sidebar-bg: $surface-color;
+    --sidebar-shadow: $shadow-floating;
 
     // Category item
-    --cate-item-bg: #eee;
-    --cate-item-thumb-bg: #fff;
-    --cate-item-title-color: #000;
+    --cate-item-bg: $surface-secondary;
+    --cate-item-thumb-bg: $surface-color;
+    --cate-item-title-color: $text-color;
 
     @include abstracts.screen(md) {
-        --cate-item-bg: #fff;
+        --cate-item-bg: $surface-color;
     }
 
     // Buttons
-    --filter-btn-color: #6c6c72;
-    --filter-btn-bg: #fff;
+    --filter-btn-color: $text-light;
+    --filter-btn-bg: $surface-color;
 
     // Product card
-    --product-card-bg: #fff;
-    --product-card-shadow: rgba(237, 237, 246, 0.2);
+    --product-card-bg: $surface-color;
+    --product-card-shadow: $shadow-surface;
 
     // Filter form
-    --filter-form-bg: #fff;
-    --filter-form-shadow: rgba(200, 200, 200, 0.4);
-    --form-tag-bg: #f8f8fb;
+    --filter-form-bg: $surface-color;
+    --filter-form-shadow: $shadow-floating;
+    --form-tag-bg: $surface-color;
 
     // Auth
-    --auth-content-bg: #fff;
+    --auth-content-bg: $surface-color;
 
     @include abstracts.screen(md) {
-        --auth-intro-bg: #fff;
+        --auth-intro-bg: $surface-color;
     }
 
     // Forms
-    --form-placeholder-color: #d2d1d6;
+    --form-placeholder-color: $text-muted;
     --form-select-dialog-shadow: rgba($color: #000000, $alpha: 0.15);
-    --form-select-dialog-bg: #fff;
-    --form-option-hover-bg: #ebebeb;
+    --form-select-dialog-bg: $surface-color;
+    --form-option-hover-bg: $surface-secondary;
 
     // Product detail
-    --product-detail-bg: #fff;
-    --product-detail-info-bg: #f6f6f6;
-    --product-detail-info-content-bg: #fff;
-    --product-detail-tag-bg: #ededf6;
+    --product-detail-bg: $surface-color;
+    --product-detail-info-bg: $surface-secondary;
+    --product-detail-info-content-bg: $surface-color;
+    --product-detail-tag-bg: $primary-light;
 
     @include abstracts.screen(md) {
-        --product-detail-bg: #fafafd;
-        --product-detail-info-bg: #fff;
+        --product-detail-bg: $surface-color;
+        --product-detail-info-bg: $surface-color;
     }
 
     // Breadcrumbs
-    --breadcrumbs-bg: #f6f6f6;
-    --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
+    --breadcrumbs-bg: $surface-secondary;
+    --breadcrumbs-shadow: $shadow-surface;
 
     @include abstracts.screen(md) {
-        --breadcrumbs-bg: #fff;
+        --breadcrumbs-bg: $surface-color;
     }
 
     // Search bar
-    --search-bar-bg: #fff;
+    --search-bar-bg: $surface-color;
 
     // Review card
-    --review-card-bg: #fafafd;
+    --review-card-bg: $surface-secondary;
 
     @include abstracts.screen(md) {
-        --review-card-bg: #fff;
+        --review-card-bg: $surface-color;
     }
 
     // Text content
-    --text-content-hr-bg: #ebebeb;
+    --text-content-hr-bg: $border-color;
 
     // Checkout
-    --checkout-breadcrumbs-bg: #fff;
-    --checkout-cart-info-bg: #fff;
-    --checkout-cart-info-shadow: rgba(237, 237, 246, 0.2);
-    --checkout-border-color: #d2d1d6;
-    --checkout-gift-shadow: rgba(237, 237, 246, 0.2);
-    --checkout-payment-item-bg: #f6f6f6;
+    --checkout-breadcrumbs-bg: $surface-color;
+    --checkout-cart-info-bg: $surface-color;
+    --checkout-cart-info-shadow: $shadow-surface;
+    --checkout-border-color: $border-color;
+    --checkout-gift-shadow: $shadow-surface;
+    --checkout-payment-item-bg: $surface-secondary;
 
     // Dialog
-    --dialog-bg: #fff;
-    --dialog-shadow: rgba(237, 237, 246, 0.2);
+    --dialog-bg: $surface-color;
+    --dialog-shadow: $shadow-surface;
 
     // Profile
-    --profile-sidebar-bg: #fff;
-    --profile-sidebar-shadow: rgba(237, 237, 246, 0.2);
-    --profile-sidebar-link-hover: #ebebeb;
+    --profile-sidebar-bg: $surface-color;
+    --profile-sidebar-shadow: $shadow-surface;
+    --profile-sidebar-link-hover: $surface-secondary;
 
     // Account info
-    --account-info-bg: #f6f6f6;
-    --account-info-icon-bg: #fff;
+    --account-info-bg: $surface-secondary;
+    --account-info-icon-bg: $surface-color;
 
     // Separate
-    --separate-color: #d2d1d6;
-}*/
-
-@use "../abstracts";
-
-html {
-    // =========================
-    // TEXT
-    // =========================
-
-    --text-color: var(--text-color);
-    --icon-color: brightness(0) saturate(100%) invert(8%) sepia(10%) saturate(4042%) hue-rotate(212deg) brightness(90%)
-        contrast(95%);
-
-    // =========================
-    // BODY
-    // =========================
-
-    --body-bg: var(--bg-color);
-
-    // =========================
-    // HEADER
-    // =========================
-
-    --header-bg-color: var(--surface-color);
-    --footer-bg-color: var(--header-bg-color);
-
-    @include abstracts.screen(lg) {
-        --header-bg-color: var(--surface-color);
-        --header-shadow-color: var(--shadow-sm);
-    }
-
-    // =========================
-    // TOP ACTION
-    // =========================
-
-    --top-act-group-bg-color: var(--surface-color);
-    --top-act-group-shadow: var(--shadow-sm);
-    --top-act-group-separate: var(--border-color);
-
-    // =========================
-    // HEADER DROPDOWN
-    // =========================
-
-    --header-act-dropdown-bg: var(--surface-color);
-    --header-act-dropdown-shadow: var(--shadow-lg);
-    --header-act-dropdown-border-color: var(--border-color);
-
-    // =========================
-    // DROPDOWN
-    // =========================
-
-    --dropdown-bg-color: var(--surface-color);
-    --dropdown-shadow-color: var(--shadow-lg);
-    --top-menu-border-color: var(--border-color);
-
-    // =========================
-    // SIDEBAR
-    // =========================
-
-    --sidebar-bg: var(--surface-color);
-    --sidebar-shadow: var(--shadow-lg);
-
-    // =========================
-    // CATEGORY
-    // =========================
-
-    --cate-item-bg: var(--surface-secondary);
-    --cate-item-thumb-bg: var(--surface-color);
-    --cate-item-title-color: var(--text-color);
-
-    @include abstracts.screen(md) {
-        --cate-item-bg: var(--surface-color);
-    }
-
-    // =========================
-    // BUTTON
-    // =========================
-
-    --filter-btn-color: var(--text-light);
-    --filter-btn-bg: var(--surface-color);
-
-    // =========================
-    // PRODUCT CARD
-    // =========================
-
-    --product-card-bg: var(--surface-color);
-    --product-card-shadow: var(--shadow-md);
-
-    // =========================
-    // FILTER FORM
-    // =========================
-
-    --filter-form-bg: var(--surface-color);
-    --filter-form-shadow: var(--shadow-lg);
-    --form-tag-bg: var(--surface-secondary);
-
-    // =========================
-    // AUTH
-    // =========================
-
-    --auth-content-bg: var(--surface-color);
-
-    @include abstracts.screen(md) {
-        --auth-intro-bg: var(--surface-color);
-    }
-
-    // =========================
-    // FORM
-    // =========================
-
-    --form-placeholder-color: var(--text-muted);
-    --form-select-dialog-shadow: var(--shadow-lg);
-    --form-select-dialog-bg: var(--surface-color);
-    --form-option-hover-bg: #ebebeb;
-
-    // =========================
-    // PRODUCT DETAIL
-    // =========================
-
-    --product-detail-bg: var(--surface-color);
-    --product-detail-info-bg: var(--bg-color);
-    --product-detail-info-content-bg: var(--surface-color);
-    --product-detail-tag-bg: var(--surface-secondary);
-
-    @include abstracts.screen(md) {
-        --product-detail-bg: var(--bg-color);
-        --product-detail-info-bg: var(--surface-color);
-    }
-
-    // =========================
-    // BREADCRUMBS
-    // =========================
-
-    --breadcrumbs-bg: var(--bg-color);
-    --breadcrumbs-shadow: var(--shadow-sm);
-
-    @include abstracts.screen(md) {
-        --breadcrumbs-bg: var(--surface-color);
-    }
-
-    // =========================
-    // SEARCH BAR
-    // =========================
-
-    --search-bar-bg: var(--surface-color);
-
-    // =========================
-    // REVIEW
-    // =========================
-
-    --review-card-bg: var(--bg-color);
-
-    @include abstracts.screen(md) {
-        --review-card-bg: var(--surface-color);
-    }
-
-    // =========================
-    // TEXT CONTENT
-    // =========================
-
-    --text-content-hr-bg: #ebebeb;
-
-    // =========================
-    // CHECKOUT
-    // =========================
-
-    --checkout-breadcrumbs-bg: var(--surface-color);
-    --checkout-cart-info-bg: var(--surface-color);
-    --checkout-cart-info-shadow: var(--shadow-md);
-    --checkout-border-color: var(--border-color);
-    --checkout-gift-shadow: var(--shadow-sm);
-    --checkout-payment-item-bg: var(--bg-color);
-
-    // =========================
-    // DIALOG
-    // =========================
-
-    --dialog-bg: var(--surface-color);
-    --dialog-shadow: var(--shadow-lg);
-
-    // =========================
-    // PROFILE
-    // =========================
-
-    --profile-sidebar-bg: var(--surface-color);
-    --profile-sidebar-shadow: var(--shadow-md);
-    --profile-sidebar-link-hover: #ebebeb;
-
-    // =========================
-    // ACCOUNT INFO
-    // =========================
-
-    --account-info-bg: var(--bg-color);
-    --account-info-icon-bg: var(--surface-color);
-
-    // =========================
-    // SEPARATE
-    // =========================
-
-    --separate-color: var(--border-color);
+    --separate-color: $border-color;
 }

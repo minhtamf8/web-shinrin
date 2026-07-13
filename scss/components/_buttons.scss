@@ -77,8 +77,8 @@
     }
 
     &--primary {
-        color: #171c28;
-        background: #ffb700;
+        color: #fff;
+        background: #556b2f;
     }
 
     &--outline {
@@ -103,5 +103,6 @@
 
     &:hover {
         opacity: 0.9;
+        background: #445824;
     }
 }
