@@ -1,5 +1,5 @@
 {
-    "name": "f8-project-08",
+    "name": "web-shinrin",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -9,14 +9,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/minhtamf8/htmlcss-project-08.git"
+        "url": "git+https://github.com/minhtamf8/web-shinrin.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "type": "commonjs",
     "bugs": {
-        "url": "https://github.com/minhtamf8/htmlcss-project-08/issues"
+        "url": "https://github.com/minhtamf8/web-shinrin/issues"
     },
-    "homepage": "https://github.com/minhtamf8/htmlcss-project-08#readme"
+    "homepage": "https://github.com/minhtamf8/web-shinrin#readme"
 }

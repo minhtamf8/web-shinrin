@@ -1,0 +1,109 @@
+:root {
+    // BRAND
+    // Màu nhận diện thương hiệu ShinRin
+    // Dùng cho Button, Link, CTA, Active, Highlight...
+    // =========================// =========================// =========================
+    --primary-color: #5b8f72; // Màu thương hiệu chính (Button, Link, Active)
+    --primary-hover: #4d7b62; // Hover cho Button và Link
+    --primary-dark: #365544; // Heading nổi bật, Footer, nền tối
+    --primary-light: #e8f1eb; // Background nhẹ, Badge, Tag, Hover nhẹ
+
+    // TEXT
+    --text-color: #1d2320; // Nội dung chính, Heading
+    --text-light: #59625c; // Nội dung phụ, Description
+    --text-muted: #8b928d; // Placeholder, Disabled, Caption
+
+    --text-link-color: #0071dc; // Link, CTA, Button
+    --text-link-bg: #77dae6; // Hover Link, CTA, Button
+
+    // BACKGROUND
+    --bg-color: #f4f1e9; // Màu nền toàn website (Body)
+    --surface-color: #fbfaf6; // Nền Card, Form, Product Card
+    --surface-secondary: #efebe2; // Nền Section xen kẽ, Hover, Box phụ
+
+    // BORDER
+    --border-color: #efebe2; // Viền Card, Input, Divider
+
+    // STATE
+    --success-color: #4f8f61; // Thành công, Đặt hàng thành công
+    --warning-color: #d2a548; // Cảnh báo, Sắp hết hàng
+    --danger-color: #cf5a5a; // Lỗi, Xóa sản phẩm, Validation
+
+    // SPACING
+    // Khoảng cách chuẩn của Design System
+    // Dùng cho margin, padding, gap
+    --space-2: 0.2rem; // Khoảng cách siêu nhỏ
+    --space-4: 0.4rem; // Icon
+    --space-6: 0.6rem; // Label nhỏ
+    --space-8: 0.8rem; // Input nhỏ
+    --space-10: 1rem; // Padding nhỏ
+    --space-12: 1.2rem; // Button nhỏ
+    --space-16: 1.6rem; // Khoảng cách phổ biến
+    --space-20: 2rem; // Card
+    --space-24: 2.4rem; // Section nhỏ
+    --space-32: 3.2rem; // Block
+    --space-40: 4rem; // Hero Content
+    --space-48: 4.8rem; // Section
+    --space-64: 6.4rem; // Khoảng cách lớn
+
+    // RADIUS
+    --radius-sm: 6px; // Input nhỏ
+    --radius-md: 12px; // Card, Button
+    --radius-lg: 16px; // Product Card
+    --radius-xl: 24px; // Hero Card, Banner
+    --radius-pill: 999px; // Pill Button, Badge
+
+    // SHADOW
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04); // Input, Badge
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06); // Card
+    --shadow-lg: 0 10px 24px rgba(0, 0, 0, 0.08); // Modal, Hero Product
+
+    // SHADOW COLORS
+    --shadow-surface: rgba(237, 237, 246, 0.2);
+    --shadow-floating: rgba(200, 200, 200, 0.4);
+    --form-select-dialog-shadow: rgba(255, 255, 255, 0.15);
+
+    //FILTER
+    --icon-color: brightness(0) saturate(100%) invert(8%) sepia(10%) saturate(4042%) hue-rotate(212deg) brightness(90%)
+        contrast(95%);
+
+    // TRANSITION
+    // Hiệu ứng chuyển động
+    --transition-fast: 0.2s ease; // Hover Icon
+    --transition-base: 0.3s ease; // Button, Card
+    --transition-slow: 0.45s ease; // Hero Animation, Modal
+
+    // Z-INDEX
+    // Thứ tự hiển thị
+    --z-dropdown: 100; // Dropdown Menu
+    --z-sticky: 200; // Header Sticky
+    --z-overlay: 300; // Overlay
+    --z-modal: 400; // Modal
+    --z-toast: 500; // Toast Notification
+
+    // FONT SIZE
+    --text-xs: 1.2rem; // Caption
+    --text-sm: 1.4rem; // Small Text
+    --text-base: 1.6rem; // Body
+    --text-md: 1.8rem; // Description lớn
+    --text-lg: 2rem; // Subtitle
+    --text-xl: 2.4rem; // Section Title
+    --text-2xl: 3rem; // Hero Sub Heading
+    --text-3xl: 4rem; // Hero Heading
+
+    // FONT WEIGHT
+    --weight-regular: 400; // Nội dung thường
+    --weight-medium: 500; // Menu, Button
+    --weight-semibold: 600; // Subtitle
+    --weight-bold: 700; // Heading
+
+    // LINE HEIGHT
+    --leading-tight: 1.2; // Heading
+    --leading-normal: 1.5; // Nội dung
+    --leading-relaxed: 1.7; // Blog, News
+
+    // LETTER SPACING
+    --tracking-tight: -0.02em; // Hero Heading
+    --tracking-normal: 0; // Body
+    --tracking-wide: 0.02em; // Button, Label, Menu
+}

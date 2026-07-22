@@ -1,6 +1,6 @@
 .text-content {
-    font-size: 1.6rem;
-    line-height: 1.6;
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
 
     h1,
     h2,
@@ -8,31 +8,31 @@
     h4,
     h5,
     h6 {
-        font-weight: 600;
+        font-weight: var(--weight-bold);
     }
 
     h1 {
-        font-size: 2.6rem;
+        font-size: var(--text-2xl);
     }
 
     h2 {
-        font-size: 2.2rem;
+        font-size: var(--text-xl);
     }
 
     h3 {
-        font-size: 1.8rem;
+        font-size: var(--text-lg);
     }
 
     h4 {
-        font-size: 1.6rem;
+        font-size: var(--text-base);
     }
 
     h5 {
-        font-size: 1.4rem;
+        font-size: var(--text-lg);
     }
 
     h6 {
-        font-size: 1.2rem;
+        font-size: var(--text-base);
     }
 
     h1,
@@ -65,15 +65,15 @@
     }
 
     a {
-        color: #0071dc;
+        color: var(--text-link-color);
         text-decoration: underline;
     }
 
     blockquote {
-        background: rgba($color: #77dae6, $alpha: 0.1);
+        background: rgba($color: var(--text-link-bg), $alpha: 0.1);
         padding: 20px;
 
-        border-left: 3px solid #77dae6;
+        border-left: 3px solid var(--text-link-bg);
 
         p {
             margin: 0;
@@ -85,6 +85,6 @@
         height: 1px;
         margin: 40px 0;
 
-        background: var(--text-content-hr-bg);
+        background: var(--text-link-bg);
     }
 }

@@ -163,8 +163,8 @@
         height: 50px;
         padding: 0 15px;
 
-        font-size: 1.5rem;
-        font-weight: 500;
+        font-size: var(--text-base);
+        font-weight: var(--weight-medium);
         line-height: 146.667%;
 
         @include abstracts.screen(lg) {

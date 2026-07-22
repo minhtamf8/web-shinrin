@@ -1,4 +1,3 @@
-/*
 $breakpoints: (
     xxl: 1400px,
     xl: 1200px,
@@ -29,4 +28,3 @@ $display-values: block, flex, grid, none;
         @include make-display($breakpoint);
     }
 }
-*/

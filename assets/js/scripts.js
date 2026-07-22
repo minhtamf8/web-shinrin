@@ -1,26 +1,40 @@
+// =======================================================
+// ShinRin Website
+// scripts.js
+// =======================================================
+
+// =======================================================
+// SHORTCUT
+// =======================================================
+
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
+// =======================================================
+// TEMPLATE LOADER
+// =======================================================
+
 /**
- * Hàm tải template
+ * Load HTML template
  *
- * Cách dùng:
- * <div id="parent"></div>
- * <script>
- *  load("#parent", "./path-to-template.html");
- * </script>
+ * Ví dụ:
+ * load("#header", "./templates/header.html");
  */
 function load(selector, path) {
+    const container = $(selector);
+    if (!container) return;
+
     const cached = localStorage.getItem(path);
+
     if (cached) {
-        $(selector).innerHTML = cached;
+        container.innerHTML = cached;
     }
 
     fetch(path)
-        .then((res) => res.text())
+        .then((response) => response.text())
         .then((html) => {
             if (html !== cached) {
-                $(selector).innerHTML = html;
+                container.innerHTML = html;
                 localStorage.setItem(path, html);
             }
         })
@@ -29,206 +43,333 @@ function load(selector, path) {
         });
 }
 
+// =======================================================
+// UTILITIES
+// =======================================================
+
 /**
- * Hàm kiểm tra một phần tử
- * có bị ẩn bởi display: none không
+ * Kiểm tra element có đang bị display:none
  */
 function isHidden(element) {
     if (!element) return true;
 
-    if (window.getComputedStyle(element).display === "none") {
-        return true;
-    }
-
-    let parent = element.parentElement;
-    while (parent) {
-        if (window.getComputedStyle(parent).display === "none") {
+    while (element) {
+        if (window.getComputedStyle(element).display === "none") {
             return true;
         }
-        parent = parent.parentElement;
+
+        element = element.parentElement;
     }
 
     return false;
 }
 
 /**
- * Hàm buộc một hành động phải đợi
- * sau một khoảng thời gian mới được thực thi
+ * Debounce
  */
-function debounce(func, timeout = 300) {
+function debounce(callback, delay = 300) {
     let timer;
+
     return (...args) => {
         clearTimeout(timer);
+
         timer = setTimeout(() => {
-            func.apply(this, args);
-        }, timeout);
+            callback(...args);
+        }, delay);
     };
 }
 
+// =======================================================
+// DROPDOWN
+// =======================================================
+
 /**
- * Hàm tính toán vị trí arrow cho dropdown
+ * Tính vị trí arrow của dropdown
  *
- * Cách dùng:
- * 1. Thêm class "js-dropdown-list" vào thẻ ul cấp 1
- * 2. CSS "left" cho arrow qua biến "--arrow-left-pos"
+ * HTML:
+ * <ul class="js-dropdown-list">
  */
 const calArrowPos = debounce(() => {
-    if (isHidden($(".js-dropdown-list"))) return;
+    const dropdown = $(".js-dropdown-list");
 
-    const items = $$(".js-dropdown-list > li");
+    if (isHidden(dropdown)) return;
 
-    items.forEach((item) => {
+    dropdown.querySelectorAll(":scope > li").forEach((item) => {
         const arrowPos = item.offsetLeft + item.offsetWidth / 2;
+
         item.style.setProperty("--arrow-left-pos", `${arrowPos}px`);
     });
 });
 
-// Tính toán lại vị trí arrow khi resize trình duyệt
+// Resize browser
 window.addEventListener("resize", calArrowPos);
 
-// Tính toán lại vị trí arrow sau khi tải template
-window.addEventListener("template-loaded", calArrowPos);
+// =======================================================
+// MENU
+// =======================================================
 
-/**
- * Giữ active menu khi hover
- *
- * Cách dùng:
- * 1. Thêm class "js-menu-list" vào thẻ ul menu chính
- * 2. Thêm class "js-dropdown" vào class "dropdown" hiện tại
- *  nếu muốn reset lại item active khi ẩn menu
- */
-window.addEventListener("template-loaded", handleActiveMenu);
-
-function handleActiveMenu() {
+function initMenu() {
     const dropdowns = $$(".js-dropdown");
     const menus = $$(".js-menu-list");
+
     const activeClass = "menu-column__item--active";
 
     const removeActive = (menu) => {
         menu.querySelector(`.${activeClass}`)?.classList.remove(activeClass);
     };
 
-    const init = () => {
+    const resetMenu = () => {
         menus.forEach((menu) => {
-            const items = menu.children;
+            const items = [...menu.children];
+
             if (!items.length) return;
 
             removeActive(menu);
-            if (window.innerWidth > 991) items[0].classList.add(activeClass);
 
-            Array.from(items).forEach((item) => {
-                item.onmouseenter = () => {
-                    if (window.innerWidth <= 991) return;
-                    removeActive(menu);
-                    item.classList.add(activeClass);
-                };
-                item.onclick = () => {
-                    if (window.innerWidth > 991) return;
-                    removeActive(menu);
-                    item.classList.add(activeClass);
-                    item.scrollIntoView();
-                };
-            });
+            if (window.innerWidth > 991) {
+                items[0].classList.add(activeClass);
+            }
         });
     };
 
-    init();
+    resetMenu();
+
+    menus.forEach((menu) => {
+        [...menu.children].forEach((item) => {
+            item.addEventListener("mouseenter", () => {
+                if (window.innerWidth <= 991) return;
+
+                removeActive(menu);
+
+                item.classList.add(activeClass);
+            });
+
+            item.addEventListener("click", () => {
+                if (window.innerWidth > 991) return;
+
+                removeActive(menu);
+
+                item.classList.add(activeClass);
+
+                item.scrollIntoView({
+                    block: "nearest",
+                });
+            });
+        });
+    });
 
     dropdowns.forEach((dropdown) => {
-        dropdown.onmouseleave = () => init();
+        dropdown.addEventListener("mouseleave", resetMenu);
     });
 }
+
+// =======================================================
+// TOGGLE
+// =======================================================
 
 /**
- * JS toggle
+ * Toggle show / hide
  *
- * Cách dùng:
- * <button class="js-toggle" toggle-target="#box">Click</button>
- * <div id="box">Content show/hide</div>
+ * HTML:
+ * <button class="js-toggle" toggle-target="#menu">
+ * <div id="menu" class="hide"></div>
  */
-window.addEventListener("template-loaded", initJsToggle);
 
-function initJsToggle() {
-    $$(".js-toggle").forEach((button) => {
-        const target = button.getAttribute("toggle-target");
-        if (!target) {
-            document.body.innerText = `Cần thêm toggle-target cho: ${button.outerHTML}`;
+function initToggle() {
+    const buttons = $$(".js-toggle");
+
+    buttons.forEach((button) => {
+        const targetSelector = button.getAttribute("toggle-target");
+
+        if (!targetSelector) {
+            console.error(`Missing toggle-target: ${button.outerHTML}`);
+            return;
         }
-        button.onclick = (e) => {
-            e.preventDefault();
 
-            if (!$(target)) {
-                return (document.body.innerText = `Không tìm thấy phần tử "${target}"`);
-            }
-            const isHidden = $(target).classList.contains("hide");
+        const target = $(targetSelector);
+
+        if (!target) {
+            console.error(`Cannot find element: ${targetSelector}`);
+            return;
+        }
+
+        button.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const isHidden = target.classList.contains("hide");
 
             requestAnimationFrame(() => {
-                $(target).classList.toggle("hide", !isHidden);
-                $(target).classList.toggle("show", isHidden);
+                target.classList.toggle("show", isHidden);
+                target.classList.toggle("hide", !isHidden);
             });
-        };
-        document.onclick = function (e) {
-            if (!e.target.closest(target)) {
-                const isHidden = $(target).classList.contains("hide");
-                if (!isHidden) {
-                    button.click();
-                }
+        });
+    });
+
+    // Click ngoài sẽ đóng tất cả Toggle
+    document.addEventListener("click", (e) => {
+        buttons.forEach((button) => {
+            const targetSelector = button.getAttribute("toggle-target");
+            const target = $(targetSelector);
+
+            if (!target) return;
+
+            if (button.contains(e.target) || target.contains(e.target)) {
+                return;
             }
-        };
+
+            target.classList.remove("show");
+            target.classList.add("hide");
+        });
     });
 }
 
-window.addEventListener("template-loaded", () => {
+// =======================================================
+// MOBILE MENU
+// =======================================================
+
+/**
+ * Mobile Navbar
+ *
+ * HTML:
+ * .js-dropdown-list
+ */
+
+function initMobileMenu() {
     const links = $$(".js-dropdown-list > li > a");
 
     links.forEach((link) => {
-        link.onclick = () => {
+        link.addEventListener("click", () => {
             if (window.innerWidth > 991) return;
+
             const item = link.closest("li");
-            item.classList.toggle("navbar__item--active");
-        };
-    });
-});
 
-window.addEventListener("template-loaded", () => {
-    const tabsSelector = "prod-tab__item";
-    const contentsSelector = "prod-tab__content";
-
-    const tabActive = `${tabsSelector}--current`;
-    const contentActive = `${contentsSelector}--current`;
-
-    const tabContainers = $$(".js-tabs");
-    tabContainers.forEach((tabContainer) => {
-        const tabs = tabContainer.querySelectorAll(`.${tabsSelector}`);
-        const contents = tabContainer.querySelectorAll(`.${contentsSelector}`);
-        tabs.forEach((tab, index) => {
-            tab.onclick = () => {
-                tabContainer.querySelector(`.${tabActive}`)?.classList.remove(tabActive);
-                tabContainer.querySelector(`.${contentActive}`)?.classList.remove(contentActive);
-                tab.classList.add(tabActive);
-                contents[index].classList.add(contentActive);
-            };
+            item?.classList.toggle("navbar__item--active");
         });
     });
-});
+}
 
-window.addEventListener("template-loaded", () => {
-    const switchBtn = document.querySelector("#switch-theme-btn");
-    if (switchBtn) {
-        switchBtn.onclick = function () {
-            const isDark = localStorage.dark === "true";
-            document.querySelector("html").classList.toggle("dark", !isDark);
-            localStorage.setItem("dark", !isDark);
-            switchBtn.querySelector("span").textContent = isDark ? "Dark mode" : "Light mode";
-        };
-        const isDark = localStorage.dark === "true";
-        switchBtn.querySelector("span").textContent = isDark ? "Light mode" : "Dark mode";
-    }
-});
+// =======================================================
+// TABS
+// =======================================================
 
-const isDark = localStorage.dark === "true";
-document.querySelector("html").classList.toggle("dark", isDark);
+/**
+ * Product Tabs
+ *
+ * HTML:
+ * <div class="js-tabs">
+ */
 
-window.addEventListener("load", () => {
-    document.querySelector(".hero").classList.add("active");
-});
+function initTabs() {
+    const tabContainers = $$(".js-tabs");
+
+    tabContainers.forEach((container) => {
+        const tabs = container.querySelectorAll(".prod-tab__item");
+        const contents = container.querySelectorAll(".prod-tab__content");
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener("click", () => {
+                container.querySelector(".prod-tab__item--current")?.classList.remove("prod-tab__item--current");
+
+                container.querySelector(".prod-tab__content--current")?.classList.remove("prod-tab__content--current");
+
+                tab.classList.add("prod-tab__item--current");
+                contents[index]?.classList.add("prod-tab__content--current");
+            });
+        });
+    });
+}
+
+// =======================================================
+// THEME
+// =======================================================
+
+const THEME_KEY = "dark";
+
+/**
+ * Kiểm tra Dark Mode
+ */
+function isDarkMode() {
+    return localStorage.getItem(THEME_KEY) === "true";
+}
+
+/**
+ * Đổi icon/text của Button
+ */
+function updateThemeButton(button, darkMode) {
+    const text = button.querySelector("span");
+
+    if (!text) return;
+
+    text.textContent = darkMode ? "Light mode" : "Dark mode";
+}
+
+/**
+ * Áp dụng Theme
+ */
+function applyTheme(darkMode) {
+    document.documentElement.classList.toggle("dark", darkMode);
+
+    localStorage.setItem(THEME_KEY, darkMode);
+}
+
+/**
+ * Theme Switch
+ */
+function initTheme() {
+    const button = $("#switch-theme-btn");
+
+    if (!button) return;
+
+    // Đồng bộ giao diện với Local Storage
+    const darkMode = isDarkMode();
+
+    applyTheme(darkMode);
+
+    updateThemeButton(button, darkMode);
+
+    button.addEventListener("click", () => {
+        const nextMode = !isDarkMode();
+
+        applyTheme(nextMode);
+
+        updateThemeButton(button, nextMode);
+    });
+}
+
+// =======================================================
+// INITIALIZE
+// =======================================================
+
+/**
+ * Khởi tạo toàn bộ website
+ */
+function init() {
+    // Dropdown
+    calArrowPos();
+
+    // Menu
+    initMenu();
+
+    // Toggle
+    initToggle();
+
+    // Mobile Menu
+    initMobileMenu();
+
+    // Tabs
+    initTabs();
+
+    // Theme
+    initTheme();
+}
+
+/**
+ * Sau khi Template được load
+ */
+window.addEventListener("template-loaded", init);
+
+/**
+ * Resize Browser
+ */
+window.addEventListener("resize", calArrowPos);
