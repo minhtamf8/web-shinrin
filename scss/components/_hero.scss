@@ -8,7 +8,7 @@
     position: relative;
 
     width: 100%;
-    min-height: 662px;
+    min-height: var(--space-662);
     height: calc(100vh - var(--header-height));
 
     overflow: hidden;
@@ -23,7 +23,7 @@
         position: absolute;
         inset: 0;
 
-        z-index: 1;
+        z-index: var(--z-index-100);
 
         background: linear-gradient(
             90deg,
@@ -63,14 +63,14 @@
         position: absolute;
 
         top: 50%;
-        left: 80px;
+        left: var(--space-80);
 
         transform: translateY(-50%);
 
-        width: 500px;
+        width: var(--space-500);
         max-width: 40%;
 
-        z-index: 2;
+        z-index: var(--z-index-200);
 
         display: flex;
         flex-direction: column;
@@ -82,17 +82,17 @@
     ======================================================*/
 
     &__heading {
-        margin-bottom: 36px;
+        margin-bottom: var(--space-36);
 
         font-size: clamp(5.8rem, 6vw, 8rem);
-        font-weight: var(--weight-medium);
-        line-height: 1.05;
-        letter-spacing: var(--tracking-tight);
+        font-weight: var(--weight-500);
+        line-height: var(--line-height-12);
+        letter-spacing: var(--letter-spacing-02);
 
         color: var(--text-color);
 
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(var(--space-30));
 
         animation: fade-up 0.8s forwards;
     }
@@ -102,18 +102,18 @@
     ======================================================*/
 
     &__desc {
-        max-width: 500px;
+        max-width: var(--space-500);
 
-        margin-bottom: 48px;
+        margin-bottom: var(--space-48);
 
-        font-size: var(--text-lg);
-        line-height: var(--leading-relaxed);
+        font-size: var(--font-size-16r);
+        line-height: var(--line-height-15);
 
         color: var(--text-color);
         opacity: 0.9;
 
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(var(--space-30));
 
         animation: fade-up 0.8s 0.2s forwards;
     }
@@ -124,10 +124,10 @@
 
     &__actions {
         display: flex;
-        gap: 24px;
+        gap: var(--space-24);
 
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(var(--space-30));
 
         animation: fade-up 0.8s 0.4s forwards;
     }
@@ -145,7 +145,7 @@
         width: 60%;
         height: 100%;
 
-        z-index: 3;
+        z-index: var(--z-index-300);
 
         pointer-events: none;
     }
@@ -157,16 +157,16 @@
     &__glass {
         position: absolute;
 
-        right: 124px;
-        bottom: 170px;
+        right: var(--space-124);
+        bottom: var(--space-170);
 
         width: auto;
         height: 55%;
 
-        filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.12));
+        filter: drop-shadow(0 var(--space-20) var(--space-30) rgba(0, 0, 0, 0.12));
 
         opacity: 0;
-        transform: translateY(70px);
+        transform: translateY(var(--space-70));
 
         animation:
             glass-in 0.9s 0.6s forwards,
@@ -176,14 +176,14 @@
     &__logo {
         position: absolute;
 
-        right: 176px;
-        bottom: 326px;
+        right: var(--space-176);
+        bottom: var(--space-326);
 
         width: auto;
         height: auto;
 
         opacity: 0;
-        transform: translateY(70px);
+        transform: translateY(var(--space-70));
 
         animation:
             glass-in 0.9s 0.6s forwards,
@@ -193,14 +193,14 @@
     &__product-desc {
         position: absolute;
 
-        right: 172px;
-        bottom: 294px;
+        right: var(--space-172);
+        bottom: var(--space-294);
 
         width: auto;
         height: auto;
 
         opacity: 0;
-        transform: translateY(70px);
+        transform: translateY(var(--space-70));
 
         animation:
             glass-in 0.9s 0.6s forwards,

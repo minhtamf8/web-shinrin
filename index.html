@@ -520,11 +520,25 @@
                                 Get healthy living tips, seasonal recipes and exclusive offers delivered to your inbox.
                             </p>
 
-                            <form class="news__form">
-                                <input type="email" class="news__input" placeholder="Enter your email" />
+                            <div class="form__group">
+                                <div class="form__text-input">
+                                    <input
+                                        type="email"
+                                        name=""
+                                        id=""
+                                        placeholder="Email your email"
+                                        class="form__input"
+                                        required
+                                    />
+                                    <img src="./assets/icons/message.svg" alt="" class="form__input-icon" />
+                                    <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                                </div>
+                                <p class="form__error">
+                                    The email address you just entered is incorrect. Please check again.
+                                </p>
 
                                 <button type="submit" class="news__button">Subscribe</button>
-                            </form>
+                            </div>
                         </div>
                     </aside>
                 </div>
