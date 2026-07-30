@@ -28,25 +28,6 @@
     --dropdown-shadow-color: var(--shadow-md);
     --top-menu-border-color: var(--border-color);
 
-    // Hero
-    --header-height: var(--space-88);
-    --hero-bg: url("../imgs/hero/hero-bg-pc1920-748.webp");
-
-    @include abstracts.screen(lg) {
-        --header-height: var(--space-80);
-        --hero-bg: url("../imgs/hero/hero-bg-taplet1200-468.webp");
-    }
-
-    @include abstracts.screen(md) {
-        --header-height: var(--space-72);
-        --hero-bg: url("../imgs/hero/hero-bg-mobi1080-421.webp");
-    }
-
-    @include abstracts.screen(sm) {
-        --header-height: var(--space-64);
-        --hero-bg: url("../imgs/hero/hero-bg-mobis720-281.webp");
-    }
-
     // Sidebar
     --sidebar-bg: var(--bg-color);
     --sidebar-shadow: var(--shadow-md);

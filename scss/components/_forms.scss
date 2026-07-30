@@ -95,16 +95,16 @@
         width: 100%;
         height: 100%;
 
-        font-size: var(--text-base);
-        font-weight: var(--weight-medium);
-        line-height: 144.444%;
+        font-size: var(--font-size-18r);
+        font-weight: var(--weight-500);
+        line-height: var(--line-height-15);
 
         &::placeholder {
             color: var(--form-placeholder-color);
         }
 
         @include abstracts.screen(md) {
-            font-size: var(--text-lg);
+            font-size: var(--font-size-16r);
         }
     }
 
@@ -118,7 +118,7 @@
         position: absolute;
         bottom: 44px;
         left: 10px;
-        z-index: 1;
+        z-index: var(--z-index-100);
 
         display: flex;
         flex-direction: column;
@@ -156,13 +156,13 @@
 
     &__dialog-heading {
         padding: 20px;
-        font-size: var(--text-lg);
-        font-weight: var(--weight-bold);
+        font-size: var(--font-size-18r);
+        font-weight: var(--weight-600);
         text-align: center;
     }
 
     &__close-dialog {
-        font-size: 3rem;
+        font-size: var(--font-size-30r);
         position: absolute;
         right: 0;
         top: 0;
@@ -182,7 +182,7 @@
         &-input {
             flex: 1;
             height: 100%;
-            font-size: var(--text-lg);
+            font-size: var(--font-size-16r);
         }
 
         &-icon {

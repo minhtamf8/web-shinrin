@@ -1,14 +1,13 @@
 @use "../abstracts";
 
 .logo {
-    display: inline-flex;
+    display: flex;
     align-items: center;
 
     &__title {
         font-size: var(--font-size-22r);
         font-weight: var(--weight-700);
         line-height: var(--line-height-12-5);
-        letter-spacing: var(--letter-spacing0);
 
         &:hover {
             color: var(--primary-color);
