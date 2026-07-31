@@ -5,18 +5,58 @@
 // =========================================================
 
 .brand-values {
-    padding: var(--space-60) 0;
-    background: var(--bg-color);
+    padding: var(--space-100) 0;
+    background: var(--bg-brand-values);
+
+    @include abstracts.screen(xl) {
+        padding: var(--space-80) 0;
+    }
+
+    @include abstracts.screen(lg) {
+        padding: var(--space-64) 0;
+    }
+
+    @include abstracts.screen(md) {
+        padding: var(--space-48) 0;
+    }
+
+    @include abstracts.screen(sm) {
+        padding: var(--space-24) 0;
+    }
 
     &__heading {
         position: relative;
-        margin-bottom: var(--space-24);
+        margin: var(--space-50);
         padding-bottom: var(--space-20);
         text-align: center;
 
-        font-size: var(--font-size-3r);
+        font-size: var(--font-size-48r);
         font-weight: var(--weight-600);
         line-height: var(--line-height-12);
+        letter-spacing: var(--letter-spacing-02);
+
+        color: var(--text-color);
+
+        @include abstracts.screen(lg) {
+            font-size: var(--font-size-40r);
+            font-weight: var(--weight-600);
+            line-height: 1.25;
+            letter-spacing: -0.015em;
+        }
+
+        @include abstracts.screen(md) {
+            font-size: var(--font-size-32r);
+            font-weight: var(--weight-500);
+            line-height: 1.3;
+            letter-spacing: -0.01em;
+        }
+
+        @include abstracts.screen(sm) {
+            font-size: var(--font-size-28r);
+            font-weight: var(--weight-500);
+            line-height: 1.35;
+            letter-spacing: 0;
+        }
 
         &::after {
             content: "";
@@ -26,7 +66,7 @@
             bottom: 0;
 
             width: var(--space-130);
-            height: var(--space-2px);
+            height: var(--space-2);
 
             background: var(--primary-color);
 
@@ -43,21 +83,60 @@
         text-align: center;
 
         font-size: var(--font-size-18r);
+        font-weight: var(--weight-400);
         line-height: var(--line-height-17);
-    }
 
-    &__item {
-        min-height: var(--space-220);
+        color: var(--text-light);
 
-        padding: var(--space-50) var(--space-24);
+        @include abstracts.screen(lg) {
+            margin-bottom: var(--space-56);
+
+            font-size: var(--font-size-18r);
+            line-height: var(--line-height-16);
+        }
+
+        @include abstracts.screen(md) {
+            margin-bottom: var(--space-48);
+
+            font-size: var(--font-size-16r);
+            line-height: var(--line-height-16);
+        }
+
+        @include abstracts.screen(sm) {
+            margin-bottom: var(--space-40);
+
+            font-size: var(--font-size-14r);
+            line-height: var(--line-height-15);
+        }
     }
 
     &__list {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        column-gap: var(--space-20);
-        row-gap: var(--space-40);
+        column-gap: var(--space-30);
+        row-gap: var(--space-30);
         margin: var(--space-50) var(--space-20);
+
+        @include abstracts.screen(xl) {
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: var(--space-30);
+        }
+
+        @include abstracts.screen(lg) {
+            column-gap: var(--space-20);
+        }
+
+        @include abstracts.screen(md) {
+            grid-template-columns: repeat(2, 1fr);
+
+            column-gap: var(--space-30);
+        }
+
+        @include abstracts.screen(sm) {
+            grid-template-columns: repeat(1, 1fr);
+
+            column-gap: var(--space-10);
+        }
     }
 
     &__item {
@@ -68,15 +147,28 @@
         align-items: center;
         justify-content: flex-start;
 
-        min-height: var(--space-220);
+        height: 100%;
 
-        padding: var(--space-50) var(--space-24);
+        padding: var(--space-10);
+        border: var(--space-2) solid var(--bg-shadow);
 
         text-align: center;
 
         transition:
             transform var(--transition-02),
             color var(--transition-02);
+
+        @include abstracts.screen(lg) {
+            padding: var(--space-16) var(--space-10);
+        }
+
+        @include abstracts.screen(md) {
+            padding: var(--space-12) var(--space-8);
+        }
+
+        @include abstracts.screen(sm) {
+            padding: var(--space-8) var(--space-4);
+        }
 
         &:hover {
             transform: translateY(calc(-1 * var(--space-6)));
@@ -99,12 +191,12 @@
             position: absolute;
 
             top: 50%;
-            right: 0;
+            right: -17px;
 
-            width: var(--space-1px);
-            height: var(--space-64);
+            width: var(--space-2);
+            height: 70%;
 
-            background: var(--border-color);
+            background: var(--text-muted);
 
             opacity: 0.45;
 
@@ -114,6 +206,12 @@
         &:last-child::after {
             display: none;
         }
+
+        @include abstracts.screen(xl) {
+            &::after {
+                display: none;
+            }
+        }
     }
 
     &__icon {
@@ -121,11 +219,35 @@
         align-items: center;
         justify-content: center;
 
+        width: var(--space-64);
+        height: var(--space-64);
+
         margin-bottom: var(--space-24);
 
+        @include abstracts.screen(lg) {
+            width: 60px;
+            height: 60px;
+
+            margin-bottom: var(--space-20);
+        }
+
+        @include abstracts.screen(md) {
+            width: 56px;
+            height: 56px;
+
+            margin-bottom: var(--space-18);
+        }
+
+        @include abstracts.screen(sm) {
+            width: 48px;
+            height: 48px;
+
+            margin-bottom: var(--space-16);
+        }
+
         img {
-            width: var(--space-42);
-            height: var(--space-42);
+            width: 100%;
+            height: 100%;
 
             object-fit: contain;
 
@@ -148,21 +270,61 @@
 
         color: var(--text-color);
 
-        font-size: var(--font-size-14r);
-        font-weight: var(--weight-400);
-        line-height: var(--line-height-15);
+        font-size: var(--font-size-26r);
+        font-weight: var(--weight-600);
+        line-height: var(--line-height-14);
+        letter-spacing: 0;
 
         transition: color var(--transition-02);
+
+        @include abstracts.screen(lg) {
+            font-size: var(--font-size-24r);
+        }
+
+        @include abstracts.screen(md) {
+            margin-bottom: var(--space-12);
+
+            font-size: var(--font-size-18r);
+            font-weight: var(--weight-500);
+            line-height: var(--line-height-15);
+        }
+
+        @include abstracts.screen(sm) {
+            margin-bottom: var(--space-8);
+
+            font-size: var(--font-size-16r);
+        }
     }
 
     &__info {
-        max-width: var(--space-190);
+        max-width: var(--space-220);
 
         margin: 0 auto;
 
         color: var(--text-light);
 
-        font-size: var(--font-size-14r);
-        line-height: var(--line-height-15);
+        font-size: var(--font-size-16r);
+        font-weight: var(--weight-400);
+        line-height: var(--line-height-17);
+        letter-spacing: 0;
+
+        @include abstracts.screen(lg) {
+            max-width: 200px;
+
+            line-height: var(--line-height-16);
+        }
+
+        @include abstracts.screen(md) {
+            max-width: 180px;
+
+            font-size: var(--font-size-15r);
+        }
+
+        @include abstracts.screen(sm) {
+            max-width: 100%;
+
+            font-size: var(--font-size-14r);
+            line-height: var(--line-height-15);
+        }
     }
 }
