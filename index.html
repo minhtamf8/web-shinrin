@@ -31,22 +31,21 @@
         <!--  main  -->
         <main>
             <section class="hero">
+                <!-- Background -->
+                <picture class="hero__bg">
+                    <source media="(max-width:575.98px)" srcset="./assets/imgs/hero/hero-bg-mobis576-225.webp" />
+
+                    <source media="(max-width:767.98px)" srcset="./assets/imgs/hero/hero-bg-mobi768-300.webp" />
+
+                    <source media="(max-width:991.98px)" srcset="./assets/imgs/hero/hero-bg-taplet992-388.webp" />
+
+                    <img
+                        class="hero__bg-img"
+                        src="./assets/imgs/hero/hero-bg-taplet992-388.webp"
+                        alt="ShinRin background"
+                    />
+                </picture>
                 <div class="container">
-                    <!-- Background -->
-                    <picture class="hero__bg">
-                        <source media="(max-width:575.98px)" srcset="./assets/imgs/hero/hero-bg-mobis576-225.webp" />
-
-                        <source media="(max-width:767.98px)" srcset="./assets/imgs/hero/hero-bg-mobi768-300.webp" />
-
-                        <source media="(max-width:991.98px)" srcset="./assets/imgs/hero/hero-bg-taplet992-388.webp" />
-
-                        <img
-                            class="hero__bg-img"
-                            src="./assets/imgs/hero/hero-bg-taplet992-388.webp"
-                            alt="ShinRin background"
-                        />
-                    </picture>
-
                     <div class="hero__view">
                         <!-- Content -->
                         <div class="hero__content">
@@ -70,36 +69,38 @@
 
                         <!-- Product -->
                         <div class="hero__product">
-                            <picture class="hero__glass">
-                                <source
-                                    media="(max-width:575.98px)"
-                                    srcset="./assets/imgs/hero/hero-glass-mobis120.webp"
-                                />
+                            <div class="hero__glass">
+                                <picture>
+                                    <source
+                                        media="(max-width:575.98px)"
+                                        srcset="./assets/imgs/hero/hero-glass-mobis120.webp"
+                                    />
 
-                                <source
-                                    media="(max-width:767.98px)"
-                                    srcset="./assets/imgs/hero/hero-glass-mobi180.webp"
-                                />
+                                    <source
+                                        media="(max-width:767.98px)"
+                                        srcset="./assets/imgs/hero/hero-glass-mobi180.webp"
+                                    />
 
-                                <source
-                                    media="(max-width:991.98px)"
-                                    srcset="./assets/imgs/hero/hero-glass-mobis120.webp"
-                                />
+                                    <source
+                                        media="(max-width:991.98px)"
+                                        srcset="./assets/imgs/hero/hero-glass-mobis120.webp"
+                                    />
 
-                                <img
-                                    class="hero__glass-img"
-                                    src="./assets/imgs/hero/hero-glass-pc300.webp"
-                                    alt="ShinRin Glass"
-                                />
-                            </picture>
+                                    <img
+                                        class="hero__glass-img"
+                                        src="./assets/imgs/hero/hero-glass-pc300.webp"
+                                        alt="ShinRin Glass"
+                                    />
+                                </picture>
 
-                            <img class="hero__logo" src="./assets/imgs/hero/brand-glass.svg" alt="Logo in glass" />
+                                <img class="hero__logo" src="./assets/imgs/hero/brand-glass.svg" alt="Logo in glass" />
 
-                            <p class="hero__caption">
-                                ShinRin
-                                <br />
-                                wellness
-                            </p>
+                                <p class="hero__caption">
+                                    ShinRin
+                                    <br />
+                                    wellness
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

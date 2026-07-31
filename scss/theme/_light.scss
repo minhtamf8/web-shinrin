@@ -28,6 +28,21 @@
     --dropdown-shadow-color: var(--shadow-md);
     --top-menu-border-color: var(--border-color);
 
+    // Hero
+    --header-height: var(--space-88);
+
+    @include abstracts.screen(lg) {
+        --header-height: var(--space-80);
+    }
+
+    @include abstracts.screen(md) {
+        --header-height: var(--space-72);
+    }
+
+    @include abstracts.screen(sm) {
+        --header-height: var(--space-64);
+    }
+
     // Sidebar
     --sidebar-bg: var(--bg-color);
     --sidebar-shadow: var(--shadow-md);

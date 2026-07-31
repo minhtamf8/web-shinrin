@@ -1656,6 +1656,24 @@ strong {
   --dropdown-bg-color: var(--bg-color);
   --dropdown-shadow-color: var(--shadow-md);
   --top-menu-border-color: var(--border-color);
+  --header-height: var(--space-88);
+}
+@media (max-width: 991.98px) {
+  :root {
+    --header-height: var(--space-80);
+  }
+}
+@media (max-width: 767.98px) {
+  :root {
+    --header-height: var(--space-72);
+  }
+}
+@media (max-width: 575.98px) {
+  :root {
+    --header-height: var(--space-64);
+  }
+}
+:root {
   --sidebar-bg: var(--bg-color);
   --sidebar-shadow: var(--shadow-md);
   --cate-item-bg: var(--bg-secondary);
@@ -2375,8 +2393,8 @@ strong {
     HERO
 ==========================================================*/
 .hero {
-  position: relative;
   height: calc(100dvh - var(--header-height));
+  position: relative;
   overflow: hidden;
   /*======================================================
       Background
@@ -2388,7 +2406,7 @@ strong {
 }
 .hero__bg-img {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   object-fit: cover;
   user-select: none;
   pointer-events: none;
@@ -2400,10 +2418,7 @@ strong {
   ==========================================================*/
 }
 .hero__view {
-  position: relative;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: calc(100dvh - var(--header-height));
 }
 .hero {
@@ -2412,21 +2427,11 @@ strong {
   ======================================================*/
 }
 .hero__content {
-  flex: 0 0 50%;
-  position: relative;
   width: 50%;
-  padding: 0 var(--space-60);
-  z-index: var(--z-index-100);
-}
-@media (max-width: 991.98px) {
-  .hero__content {
-    padding: 0 var(--space-20);
-  }
-}
-@media (max-width: 767.98px) {
-  .hero__content {
-    padding: 0;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
 }
 .hero {
   /*======================================================
@@ -2488,8 +2493,10 @@ strong {
   ======================================================*/
 }
 .hero__product {
-  flex: 0 0 50%;
-  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 .hero {
   /*======================================================
@@ -2497,59 +2504,57 @@ strong {
   ======================================================*/
 }
 .hero__glass {
-  display: block;
   position: relative;
-  width: 100%;
-  height: 100%;
-}
-.hero__glass-img {
-  position: absolute;
-  right: 0;
-  bottom: 20%;
-  width: auto;
   height: 60%;
-  filter: drop-shadow(0 var(--space-20) var(--space-30) rgba(0, 0, 0, 0.12));
-  animation: glass-in 0.9s 0.6s forwards, glass-float 5s 1.6s ease-in-out infinite;
+  margin-right: 5%;
+  margin-bottom: 25%;
 }
 @media (max-width: 1199.98px) {
-  .hero__glass-img {
+  .hero__glass {
     height: 55%;
+    margin-bottom: 35%;
   }
+}
+@media (max-width: 991.98px) {
+  .hero__glass {
+    height: 50%;
+    margin-right: 0;
+    margin-bottom: 47%;
+  }
+}
+@media (max-width: 767.98px) {
+  .hero__glass {
+    height: 38%;
+    margin-bottom: 100%;
+  }
+}
+@media (max-width: 575.98px) {
+  .hero__glass {
+    height: 32%;
+    margin-bottom: 109%;
+  }
+}
+.hero__glass-img {
+  display: block;
+  height: 100%;
+  width: auto;
+  animation: glass-in 0.9s 0.6s forwards, glass-float 5s 1.6s ease-in-out infinite;
 }
 .hero__logo {
   position: absolute;
-  right: 5.5%;
-  bottom: 45%;
+  left: 34%;
+  top: 34%;
+  transform: translate(-50%, -50%);
   animation: glass-in 0.9s 0.6s forwards, glass-float 5s 1.6s ease-in-out infinite;
-}
-@media (max-width: 1199.98px) {
-  .hero__logo {
-    right: 6.5%;
-  }
-}
-@media (max-width: 991.98px) {
-  .hero__logo {
-    right: 7.5%;
-  }
 }
 .hero__caption {
   position: absolute;
-  right: 5%;
-  bottom: 38%;
+  left: 33%;
+  top: 54%;
+  transform: translateX(-50%);
   text-align: center;
-  font-size: var(--font-size-18r);
-  line-height: var(--line-height-14);
+  font-size: 1.8rem;
   animation: glass-in 0.9s 0.6s forwards, glass-float 5s 1.6s ease-in-out infinite;
-}
-@media (max-width: 1199.98px) {
-  .hero__caption {
-    right: 6%;
-  }
-}
-@media (max-width: 991.98px) {
-  .hero__caption {
-    right: 7%;
-  }
 }
 
 .dropdown {
