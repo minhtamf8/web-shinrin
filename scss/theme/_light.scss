@@ -29,7 +29,11 @@
     --top-menu-border-color: var(--border-color);
 
     // Hero
-    --header-height: var(--space-88);
+    --header-height: var(--space-100);
+
+    @include abstracts.screen(lg) {
+        --header-height: var(--space-88);
+    }
 
     @include abstracts.screen(lg) {
         --header-height: var(--space-80);

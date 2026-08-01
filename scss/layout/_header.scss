@@ -8,7 +8,7 @@
 .header {
     @extend %flexItemsCenter;
     position: relative;
-    height: var(--space-88);
+    height: var(--space-100);
     z-index: var(--z-index-200);
     background: var(--bg-head-footer);
 
@@ -172,13 +172,19 @@
         }
     }
 
-    //&__text {
-    // display: inline-block;
+    &__text {
+        font-size: var(--font-size-18r);
+        font-weight: var(--weight-600);
 
-    //border-bottom: 3px solid transparent;
+        @include abstracts.screen(lg) {
+            font-size: var(--font-size-20r);
+        }
+        // display: inline-block;
 
-    //padding-bottom: 4px;
-    //}
+        //border-bottom: 3px solid transparent;
+
+        //padding-bottom: 4px;
+    }
 
     &__link {
         @extend %flexItemsCenter;

@@ -17,6 +17,9 @@
     &__title span {
         display: block;
         text-align: center;
+        font-size: var(--font-size-18r);
+        font-weight: var(--weight-700);
+        line-height: var(--line-height-12-5);
     }
 }
 

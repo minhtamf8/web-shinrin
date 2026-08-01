@@ -1,8 +1,10 @@
 @use "../abstracts";
 
 .featured-products {
+    --product-color: #ffffff;
+
     padding: var(--space-100) 0;
-    background: var(--bg-featured);
+    background: var(--bg-color);
 
     @include abstracts.screen(xl) {
         padding: var(--space-80) 0;
@@ -22,6 +24,7 @@
 
     &__header {
         display: flex;
+        align-items: center;
         justify-content: space-between;
 
         margin: var(--space-50) var(--space-20);
@@ -32,8 +35,27 @@
         // padding: 0 var(--space-30);
     }
 
+    &__label {
+        font-size: var(--font-size-20r);
+        font-weight: var(--weight-500);
+        letter-spacing: var(--letter-spacing-02);
+        text-transform: uppercase;
+
+        margin: var(--space-20) 0;
+
+        color: var(--text-light);
+
+        @include abstracts.screen(lg) {
+            font-size: var(--font-size-18r);
+        }
+
+        @include abstracts.screen(md) {
+            font-size: var(--font-size-16r);
+        }
+    }
+
     &__heading {
-        margin-bottom: var(--space-20);
+        max-width: var(--space-480);
 
         font-size: var(--font-size-48r);
         font-weight: var(--weight-600);
@@ -45,9 +67,6 @@
 
         @include abstracts.screen(lg) {
             font-size: var(--font-size-40r);
-            font-weight: var(--weight-600);
-            line-height: 1.25;
-            letter-spacing: -0.015em;
         }
 
         @include abstracts.screen(md) {
@@ -59,42 +78,6 @@
 
         @include abstracts.screen(sm) {
             font-size: var(--font-size-28r);
-            font-weight: var(--weight-500);
-            line-height: 1.35;
-            letter-spacing: 0;
-        }
-    }
-
-    &__desc {
-        max-width: var(--space-480);
-        margin-bottom: var(--space-50);
-
-        font-size: var(--font-size-18r);
-        font-weight: var(--weight-400);
-        line-height: var(--line-height-17);
-        letter-spacing: var(--letter-spacing-02);
-
-        color: var(--text-light);
-
-        @include abstracts.screen(lg) {
-            margin-bottom: var(--space-56);
-
-            font-size: var(--font-size-18r);
-            line-height: var(--line-height-16);
-        }
-
-        @include abstracts.screen(md) {
-            margin-bottom: var(--space-48);
-
-            font-size: var(--font-size-16r);
-            line-height: var(--line-height-16);
-        }
-
-        @include abstracts.screen(sm) {
-            margin-bottom: var(--space-40);
-
-            font-size: var(--font-size-14r);
-            line-height: var(--line-height-15);
         }
     }
 
@@ -104,11 +87,9 @@
 
     &__cta {
         width: 50%;
-        display: inline-flex;
+        display: flex;
         justify-content: flex-end;
 
-        //align-items: flex-end;
-        align-items: center;
         padding: 0;
         gap: var(--space-10);
 
@@ -172,10 +153,11 @@
     // =====================================================
 
     &__card {
-        border: 1px solid var(--border-color);
+        border: var(--space-2) solid var(--bg-brand-values);
         border-radius: var(--radius-16);
+        box-shadow: var(--shadow-lg);
 
-        background: var(--bg-featured);
+        background: var(--bg-white);
 
         overflow: hidden;
 
@@ -261,10 +243,17 @@
         flex-direction: column;
 
         padding: var(--space-24);
+        background: var(--product-color);
+    }
+
+    &__bg {
+        background: var(--bg-white);
+        height: 100%;
     }
 
     &__title {
-        margin-bottom: var(--space-14);
+        text-align: center;
+        margin: var(--space-20) 0;
 
         font-size: var(--font-size-24r);
         font-weight: var(--weight-400);
@@ -279,8 +268,6 @@
         }
 
         @include abstracts.screen(md) {
-            margin-bottom: var(--space-12);
-
             font-size: var(--font-size-18r);
             font-weight: var(--weight-500);
             line-height: var(--line-height-15);
@@ -290,7 +277,7 @@
     &__info {
         flex: 1;
 
-        margin-bottom: var(--space-14);
+        margin: var(--space-14);
 
         color: var(--text-light);
 
@@ -299,8 +286,15 @@
         line-height: var(--line-height-17);
         letter-spacing: 0;
 
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+
         @include abstracts.screen(lg) {
-            margin-bottom: var(--space-12);
+            margin: var(--space-12);
             line-height: var(--line-height-16);
         }
 
@@ -318,7 +312,8 @@
         align-items: center;
         gap: var(--space-8);
 
-        margin-top: auto;
+        margin-left: var(--space-16);
+        margin-bottom: var(--space-4);
 
         color: var(--primary-color);
 

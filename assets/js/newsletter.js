@@ -17,3 +17,20 @@ function closeModal() {
 }
 closeBtn.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
+
+/** đổi màu */
+const colors = {
+    "green-bean": "#6D8A3A",
+    "red-bean": "#7A3B2E",
+    "soy-bean": "#C9A868",
+    "black-bean": "#2F2B29",
+    almond: "#A8835C",
+};
+
+document.querySelectorAll(".featured-products__card").forEach((card) => {
+    const product = card.dataset.product;
+
+    const body = card.querySelector(".featured-products__body");
+
+    body.style.setProperty("--product-color", colors[product]);
+});

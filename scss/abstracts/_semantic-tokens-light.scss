@@ -25,6 +25,7 @@
     --bg-brand-values: #f6f3ed;
     --bg-featured: #f6f1df;
     --bg-story: #f8f6ef;
+    --bg-white: #ffffff;
 
     // BORDER
     --border-color: #62f754; // Viền Card, Input, Divider
@@ -33,4 +34,17 @@
     --success-color: #4f8f61; // Thành công, Đặt hàng thành công
     --warning-color: #d2a548; // Cảnh báo, Sắp hết hàng
     --danger-color: #cf5a5a; // Lỗi, Xóa sản phẩm, Validation
+
+    // color food
+    --green-bean-naturo: #6d8a3a;
+    --red-bean-naturo: #7a3b2e;
+    --soy-bean-naturo: #c9a868;
+    --black-bean-naturo: #2f2b29;
+    --almon-bean-naturo: #a8835c;
+
+    --green-bean-organic: #728d48;
+    --red-bean-organic: #78453a;
+    --soy-bean-organic: #c7ae73;
+    --black-bean-organic: #383431;
+    --almon-bean-organic: #b08b65;
 }
