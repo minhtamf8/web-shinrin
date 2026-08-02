@@ -84,27 +84,25 @@
 
         color: var(--text-label);
 
-        font-size: var(--font-size-15r);
+        font-size: var(--font-size-20r);
         font-weight: var(--weight-600);
         line-height: 1.5;
         letter-spacing: var(--letter-spacing02);
         text-transform: uppercase;
 
         @include abstracts.screen(md) {
-            font-size: 1.4rem;
+            font-size: var(--font-size-18r);
         }
 
         @include abstracts.screen(sm) {
             margin-bottom: 16px;
-
-            font-size: 1.3rem;
         }
     }
 
     &__heading {
         margin-bottom: var(--space-30);
 
-        font-size: var(--font-size-56r);
+        font-size: var(--font-size-48r);
         font-weight: var(--weight-600);
         line-height: var(--line-height-12);
         letter-spacing: var(--letter-spacing-02);
@@ -112,56 +110,28 @@
         color: var(--text-color);
 
         @include abstracts.screen(xl) {
-            font-size: var(--font-size-50r);
+            font-size: var(--font-size-40r);
         }
 
         @include abstracts.screen(lg) {
-            font-size: var(--font-size-44r);
+            font-size: var(--font-size-32r);
         }
 
         @include abstracts.screen(md) {
-            font-size: var(--font-size-36r);
-        }
-
-        @include abstracts.screen(sm) {
-            margin-bottom: 24px;
-
-            font-size: 3rem;
-
-            line-height: 1.3;
+            font-size: var(--font-size-28r);
         }
     }
 
     &__desc {
-        max-width: var(--space-520);
+        max-width: var(--space-220);
 
-        margin-bottom: var(--space-50);
+        margin: var(--space-30) 0;
 
-        font-size: var(--font-size-18r);
-        font-weight: 400;
-        line-height: var(--line-height-18);
+        font-size: var(--font-size-16r);
+        font-weight: var(--weight-400);
+        line-height: var(--line-height-15);
 
         color: var(--text-light);
-
-        @include abstracts.screen(lg) {
-            font-size: 1.7rem;
-
-            line-height: 1.75;
-        }
-
-        @include abstracts.screen(md) {
-            font-size: 1.6rem;
-
-            line-height: 1.7;
-        }
-
-        @include abstracts.screen(sm) {
-            margin-bottom: 32px;
-
-            font-size: 1.5rem;
-
-            line-height: 1.65;
-        }
     }
 
     // =====================================================

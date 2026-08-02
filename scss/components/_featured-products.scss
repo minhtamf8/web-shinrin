@@ -24,15 +24,22 @@
 
     &__header {
         display: flex;
-        align-items: center;
+
         justify-content: space-between;
 
+        align-items: flex-end;
+
+        gap: var(--space-20);
+
         margin: var(--space-50) var(--space-20);
+
+        @include abstracts.screen(md) {
+            flex-wrap: wrap;
+        }
     }
 
     &__content {
-        width: 50%;
-        // padding: 0 var(--space-30);
+        flex: 1;
     }
 
     &__label {
@@ -47,10 +54,6 @@
 
         @include abstracts.screen(lg) {
             font-size: var(--font-size-18r);
-        }
-
-        @include abstracts.screen(md) {
-            font-size: var(--font-size-16r);
         }
     }
 
@@ -71,9 +74,6 @@
 
         @include abstracts.screen(md) {
             font-size: var(--font-size-32r);
-            font-weight: var(--weight-500);
-            line-height: 1.3;
-            letter-spacing: -0.01em;
         }
 
         @include abstracts.screen(sm) {
@@ -86,19 +86,32 @@
     // =====================================================
 
     &__cta {
-        width: 50%;
-        display: flex;
-        justify-content: flex-end;
+        display: inline-flex;
 
-        padding: 0;
+        align-items: center;
+
         gap: var(--space-10);
+
+        margin-left: auto;
+
+        white-space: nowrap;
 
         color: var(--primary-color);
 
-        font-size: var(--font-size-22r);
+        font-size: var(--font-size-20r);
+
         font-weight: var(--weight-600);
 
         transition: color var(--transition-02);
+
+        @include abstracts.screen(lg) {
+            width: 100%;
+
+            justify-content: flex-end;
+
+            margin-top: var(--space-12);
+            font-size: var(--font-size-18r);
+        }
 
         &:hover {
             color: var(--primary-hover);

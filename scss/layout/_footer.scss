@@ -1,8 +1,10 @@
 @use "../abstracts";
 
 .footer {
+    font-family: var(--font-ui);
     padding: var(--space-50) 0;
-    font-size: var(--font-size-14r);
+    font-size: var(--font-size-16r);
+    font-weight: var(--weight-400);
     background: var(--footer-bg-color);
 
     &__row {
@@ -23,6 +25,7 @@
 
     &__desc {
         margin-top: var(--space-30);
+
         line-height: var(--line-height-15);
 
         @include abstracts.screen(lg) {
