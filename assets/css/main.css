@@ -4954,6 +4954,116 @@ strong {
   transform: translateY(-2px);
 }
 
+/*==========================================================
+    LANGUAGE
+==========================================================*/
+.language {
+  position: relative;
+  margin-left: var(--space-20);
+  /*======================================================
+      CURRENT
+  ======================================================*/
+}
+.language__current {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.language__current:hover {
+  transform: scale(1.06);
+}
+@media (max-width: 767.98px) {
+  .language__current {
+    width: 32px;
+    height: 32px;
+  }
+}
+.language {
+  /*======================================================
+      FLAG
+  ======================================================*/
+}
+.language__flag {
+  display: block;
+  width: auto;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+.language {
+  /*======================================================
+      MENU
+  ======================================================*/
+}
+.language__menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  min-width: 180px;
+  padding: 8px 0;
+  background: #ffffff;
+  border: 1px solid #e8ebe5;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  z-index: 100;
+}
+.language--open .language__menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.language {
+  /*======================================================
+      ITEM
+  ======================================================*/
+}
+.language__item {
+  list-style: none;
+}
+.language {
+  /*======================================================
+      OPTION
+  ======================================================*/
+}
+.language__option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.language__option:hover {
+  background: #f4f7f1;
+}
+.language {
+  /*======================================================
+      TEXT
+  ======================================================*/
+}
+.language__text {
+  color: #243026;
+  font-size: var(--font-size-15r);
+  font-weight: var(--weight-500);
+  line-height: var(--line-height-15);
+  white-space: nowrap;
+}
+
 .home {
   margin-bottom: 50px;
 }
