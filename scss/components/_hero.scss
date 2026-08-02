@@ -62,6 +62,40 @@
         }
     }
 
+    &__left {
+        display: block;
+
+        justify-content: flex-start;
+
+        height: calc((100dvh - var(--header-height)) * 0.6);
+
+        margin-bottom: 10%;
+
+        @include abstracts.screen(xl) {
+            height: calc((100dvh - var(--header-height)) * 0.55);
+
+            margin-bottom: 2%;
+        }
+
+        @include abstracts.screen(lg) {
+            height: calc((100dvh - var(--header-height)) * 0.5);
+
+            margin-bottom: 2%;
+        }
+
+        @include abstracts.screen(md) {
+            height: calc((100dvh - var(--header-height)) * 0.47);
+
+            margin-bottom: -4%;
+        }
+
+        @include abstracts.screen(sm) {
+            height: calc((100dvh - var(--header-height)) * 0.32);
+
+            margin-bottom: -10%;
+        }
+    }
+
     /*======================================================
         Heading
     ======================================================*/

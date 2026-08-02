@@ -2481,6 +2481,36 @@ strong {
     padding-left: 0;
   }
 }
+.hero__left {
+  display: block;
+  justify-content: flex-start;
+  height: calc((100dvh - var(--header-height)) * 0.6);
+  margin-bottom: 10%;
+}
+@media (max-width: 1199.98px) {
+  .hero__left {
+    height: calc((100dvh - var(--header-height)) * 0.55);
+    margin-bottom: 2%;
+  }
+}
+@media (max-width: 991.98px) {
+  .hero__left {
+    height: calc((100dvh - var(--header-height)) * 0.5);
+    margin-bottom: 2%;
+  }
+}
+@media (max-width: 767.98px) {
+  .hero__left {
+    height: calc((100dvh - var(--header-height)) * 0.47);
+    margin-bottom: -4%;
+  }
+}
+@media (max-width: 575.98px) {
+  .hero__left {
+    height: calc((100dvh - var(--header-height)) * 0.32);
+    margin-bottom: -10%;
+  }
+}
 .hero {
   /*======================================================
       Heading
