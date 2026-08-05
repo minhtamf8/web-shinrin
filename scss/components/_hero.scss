@@ -5,10 +5,12 @@
 ==========================================================*/
 
 .hero {
+    --hero-view-size: calc(100dvh - var(--header-height));
+    --hero-content-width: calc(100vw * 0.5);
+    --hero-product-width: calc(100vw * 0.5);
+
     height: calc(100dvh - var(--header-height));
-
     position: relative;
-
     overflow: hidden;
 
     /*======================================================
@@ -39,7 +41,7 @@
     &__view {
         display: flex;
 
-        height: calc(100dvh - var(--header-height));
+        height: var(--hero-view-size);
     }
 
     /*======================================================
@@ -47,83 +49,60 @@
     ======================================================*/
 
     &__content {
-        width: 50%;
+        width: var(--hero-content-width);
+        position: relative;
 
         display: flex;
-
         flex-direction: column;
-
         justify-content: center;
-
-        padding-left: 30px;
-
-        @include abstracts.screen(xl) {
-            padding-left: 0;
-        }
     }
-
+    /*
     &__left {
-        display: block;
-
-        justify-content: flex-start;
-
-        height: calc((100dvh - var(--header-height)) * 0.6);
-
-        margin-bottom: 10%;
+        height: (calc(var(--hero-view-size) * 0.6)) em;
+        margin-left: (calc(var(--hero-product-width) * 0.1)) em;
 
         @include abstracts.screen(xl) {
-            height: calc((100dvh - var(--header-height)) * 0.55);
-
-            margin-bottom: 2%;
+            height: (calc(var(--hero-view-size) * 0.55)) em;
+            margin-right: 0;
         }
 
         @include abstracts.screen(lg) {
-            height: calc((100dvh - var(--header-height)) * 0.5);
-
-            margin-bottom: 2%;
+            height: (calc(var(--hero-view-size) * 0.5)) em;
         }
 
         @include abstracts.screen(md) {
-            height: calc((100dvh - var(--header-height)) * 0.47);
-
-            margin-bottom: -4%;
-        }
-
-        @include abstracts.screen(sm) {
-            height: calc((100dvh - var(--header-height)) * 0.32);
-
-            margin-bottom: -10%;
+            height: (calc(var(--hero-view-size) * 0.45)) em;
         }
     }
-
+    */
     /*======================================================
         Heading
     ======================================================*/
 
     &__heading {
-        font-size: var(--font-size-70r);
-        font-weight: var(--weight-500);
+        font-size: var(--font-size-50r);
+        font-weight: var(--weight-700);
         line-height: var(--line-height-12);
-        letter-spacing: var(--letter-spacing-02);
 
         color: var(--text-color);
 
         animation: fade-up 0.8s forwards;
 
         @include abstracts.screen(xl) {
-            font-size: var(--font-size-60r);
+            font-size: var(--font-size-42r);
         }
 
         @include abstracts.screen(lg) {
-            font-size: var(--font-size-50r);
+            font-size: var(--font-size-36r);
+            line-height: var(--line-height-10);
         }
 
         @include abstracts.screen(md) {
-            font-size: var(--font-size-40r);
+            font-size: var(--font-size-30r);
         }
 
         @include abstracts.screen(sm) {
-            font-size: var(--font-size-30r);
+            font-size: var(--font-size-24r);
         }
     }
 
@@ -134,12 +113,30 @@
     &__desc {
         margin: var(--space-30) 0;
 
-        font-size: var(--font-size-16r);
+        font-size: var(--font-size-20r);
+        font-weight: var(--weight-500);
         line-height: var(--line-height-15);
 
         color: var(--text-color);
 
         animation: fade-up 0.8s 0.2s forwards;
+
+        @include abstracts.screen(xl) {
+            font-size: var(--font-size-18r);
+        }
+
+        @include abstracts.screen(lg) {
+            margin: var(--space-20e) 0;
+            line-height: var(--line-height-12);
+        }
+
+        @include abstracts.screen(md) {
+            font-size: var(--font-size-16r);
+        }
+
+        @include abstracts.screen(sm) {
+            line-height: var(--line-height-10);
+        }
     }
 
     /*======================================================
@@ -148,8 +145,22 @@
 
     &__actions {
         display: flex;
+        gap: var(--space-10);
 
         animation: fade-up 0.8s 0.4s forwards;
+
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__btn {
+        @include abstracts.screen(sm) {
+            width: 100%;
+            //max-width: 220px;
+            justify-content: center;
+        }
     }
 
     /*======================================================
@@ -157,11 +168,11 @@
     ======================================================*/
 
     &__product {
-        width: 50%;
+        width: var(--hero-product-width);
+
         display: flex;
-
-        justify-content: flex-end;
-
+        flex-direction: column;
+        justify-content: center;
         align-items: flex-end;
     }
 
@@ -170,30 +181,20 @@
     ======================================================*/
     &__glass {
         position: relative;
-        height: calc((100dvh - var(--header-height)) * 0.6);
-
+        height: calc((100dvh - var(--header-height)) * 0.7);
         margin-right: 5%;
-        margin-bottom: 25%;
 
         @include abstracts.screen(xl) {
-            height: calc((100dvh - var(--header-height)) * 0.55);
+            height: calc(var(--hero-view-size) * 0.65);
             margin-right: 0;
-            margin-bottom: 35%;
         }
 
         @include abstracts.screen(lg) {
-            height: calc((100dvh - var(--header-height)) * 0.5);
-            margin-bottom: 47%;
+            height: calc(var(--hero-view-size) * 0.6);
         }
 
         @include abstracts.screen(md) {
-            height: calc((100dvh - var(--header-height)) * 0.47);
-            margin-bottom: 70%;
-        }
-
-        @include abstracts.screen(sm) {
-            height: calc((100dvh - var(--header-height)) * 0.32);
-            margin-bottom: 109%;
+            height: calc(var(--hero-view-size) * 0.45);
         }
     }
 
@@ -201,7 +202,7 @@
         display: block;
 
         height: 100%;
-        width: 100%;
+        width: auto;
 
         animation:
             glass-in 0.9s 0.6s forwards,
@@ -213,11 +214,9 @@
         height: 30%;
 
         left: 48%;
-
         top: 45%;
 
         translate: -50% -50%;
-
         animation:
             glass-in 0.9s 0.6s forwards,
             glass-float 5s 1.6s ease-in-out infinite;
@@ -232,28 +231,22 @@
         height: 0%;
 
         left: 48%;
-
         top: 58%;
 
-        translate: -50% -50%;
-
         text-align: center;
-
         font-size: var(--font-size-20r);
 
+        translate: -50% -50%;
         animation:
             glass-in 0.9s 0.6s forwards,
             glass-float 5s 1.6s ease-in-out infinite;
-        @include abstracts.screen(xl) {
-            font-size: var(--font-size-18r);
-        }
 
-        @include abstracts.screen(md) {
+        @include abstracts.screen(xl) {
             font-size: var(--font-size-16r);
         }
 
-        @include abstracts.screen(sm) {
-            font-size: var(--font-size-14r);
+        @include abstracts.screen(md) {
+            font-size: var(--font-size-12r);
         }
     }
 }

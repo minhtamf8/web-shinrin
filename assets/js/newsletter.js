@@ -66,3 +66,52 @@ options.forEach((option) => {
         language.classList.remove("language--open");
     });
 });
+
+/** căng chỉnh hero */
+
+const hero = document.querySelector(".hero");
+const view = document.querySelector(".hero__view");
+
+if (hero && view) {
+    const resizeHero = () => {
+        const heroWidth = hero.clientWidth;
+
+        const heroHeight = hero.clientHeight;
+
+        /*
+        View luôn là hình vuông
+        */
+
+        const viewSize = Math.min(heroWidth, heroHeight) * 0.94;
+
+        /*
+        Glass chiếm khoảng 46% View
+        */
+
+        const glassSize = viewSize * 0.46;
+
+        /*
+        Logo
+        */
+
+        const logoSize = glassSize * 0.2;
+
+        /*
+        Caption
+        */
+
+        const captionSize = glassSize * 0.055;
+
+        hero.style.setProperty("--view-size", `${viewSize}px`);
+
+        hero.style.setProperty("--glass-size", `${glassSize}px`);
+
+        hero.style.setProperty("--logo-size", `${logoSize}px`);
+
+        hero.style.setProperty("--caption-size", `${captionSize}px`);
+    };
+
+    resizeHero();
+
+    new ResizeObserver(resizeHero).observe(hero);
+}

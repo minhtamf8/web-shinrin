@@ -63,6 +63,21 @@
     --space-620: 62rem;
     --space-662: 66.2rem;
 
+    // EM
+    --space-10e: 1em;
+    --space-12e: 1.2em;
+    --space-14e: 1.4em;
+    --space-15e: 1.5em;
+    --space-16e: 1.6em;
+    --space-18e: 1.8em;
+    --space-20e: 2em;
+    --space-22e: 2.2em;
+    --space-24e: 2.4em;
+    --space-30e: 3em;
+    --space-36e: 3.6em;
+    --space-42e: 4.2em;
+    --space-50e: 5em;
+
     // RADIUS
     --radius-6: 6px; // Input nhỏ
     --radius-12: 12px; // Card, Button
@@ -102,6 +117,8 @@
     --font-size-4r: 0.4rem;
     --font-size-5r: 0.5rem;
     --font-size-6r: 0.6rem;
+    --font-size-8r: 0.8rem;
+    --font-size-10r: 1rem;
     --font-size-12r: 1.2rem; // Caption
     --font-size-14r: 1.4rem; // Small Text
     --font-size-16r: 1.6rem; // Body
@@ -111,6 +128,7 @@
     --font-size-28r: 2.8rem;
     --font-size-30r: 3rem; // Hero Sub Heading
     --font-size-32r: 3.2rem;
+    --font-size-36r: 3.6rem;
     --font-size-38r: 3.8rem; // Hero Heading
     --font-size-40r: 4rem; // Hero Heading
     --font-size-48r: 4.8rem;
@@ -129,6 +147,8 @@
     --weight-900: 900; // Black
 
     // LINE HEIGHT
+    --line-height-08: 0.8;
+    --line-height-10: 1;
     --line-height-12: 1.2; // Heading
     --line-height-12-5: 1.25; // Heading
     --line-height-13: 1.3; // Body

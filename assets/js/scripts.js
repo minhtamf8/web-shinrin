@@ -343,7 +343,7 @@ function initTheme() {
 
 /**
  * Khởi tạo toàn bộ website
- */
+ 
 function init() {
     // Dropdown
     calArrowPos();
@@ -364,12 +364,13 @@ function init() {
     initTheme();
 }
 
-/**
+
  * Sau khi Template được load
- */
+
 window.addEventListener("template-loaded", init);
 
-/**
+
  * Resize Browser
- */
+
 window.addEventListener("resize", calArrowPos);
+*/
