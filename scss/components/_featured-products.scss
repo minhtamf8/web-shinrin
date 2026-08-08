@@ -1,26 +1,7 @@
 @use "../abstracts";
 
 .featured-products {
-    --product-color: #ffffff;
-
-    padding: var(--space-100) 0;
     background: var(--bg-color);
-
-    @include abstracts.screen(xl) {
-        padding: var(--space-80) 0;
-    }
-
-    @include abstracts.screen(lg) {
-        padding: var(--space-64) 0;
-    }
-
-    @include abstracts.screen(md) {
-        padding: var(--space-48) 0;
-    }
-
-    @include abstracts.screen(sm) {
-        padding: var(--space-24) 0;
-    }
 
     &__header {
         display: flex;
@@ -43,42 +24,19 @@
     }
 
     &__label {
-        font-size: var(--font-size-20r);
-        font-weight: var(--weight-500);
-        letter-spacing: var(--letter-spacing-02);
         text-transform: uppercase;
 
         margin: var(--space-20) 0;
 
         color: var(--text-light);
-
-        @include abstracts.screen(lg) {
-            font-size: var(--font-size-18r);
-        }
     }
 
     &__heading {
         max-width: var(--space-480);
 
-        font-size: var(--font-size-48r);
-        font-weight: var(--weight-600);
-        line-height: var(--line-height-12);
-        letter-spacing: var(--letter-spacing-02);
         text-transform: uppercase;
 
         color: var(--text-color);
-
-        @include abstracts.screen(lg) {
-            font-size: var(--font-size-40r);
-        }
-
-        @include abstracts.screen(md) {
-            font-size: var(--font-size-32r);
-        }
-
-        @include abstracts.screen(sm) {
-            font-size: var(--font-size-28r);
-        }
     }
 
     // =====================================================
@@ -98,10 +56,6 @@
 
         color: var(--primary-color);
 
-        font-size: var(--font-size-20r);
-
-        font-weight: var(--weight-600);
-
         transition: color var(--transition-02);
 
         @include abstracts.screen(lg) {
@@ -110,7 +64,6 @@
             justify-content: flex-end;
 
             margin-top: var(--space-12);
-            font-size: var(--font-size-18r);
         }
 
         &:hover {
@@ -133,187 +86,82 @@
     // PRODUCT LIST
     // =====================================================
 
-    &__list {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        column-gap: var(--space-20);
-        row-gap: var(--space-30);
-        margin: var(--space-50) var(--space-20);
-
-        @include abstracts.screen(xxl) {
-            grid-template-columns: repeat(3, 1fr);
-            column-gap: var(--space-30);
-        }
-
-        @include abstracts.screen(lg) {
-            grid-template-columns: repeat(2, 1fr);
-            column-gap: var(--space-20);
-        }
-
-        @include abstracts.screen(md) {
-            column-gap: var(--space-30);
-        }
-
-        @include abstracts.screen(sm) {
-            grid-template-columns: repeat(1, 1fr);
-
-            column-gap: var(--space-10);
-        }
-    }
+    //&__list {
+    // margin: var(--space-50) 0;
+    //}
 
     // =====================================================
     // CARD
     // =====================================================
 
     &__card {
-        border: var(--space-2) solid var(--bg-brand-values);
-        border-radius: var(--radius-16);
-        box-shadow: var(--shadow-lg);
+        --product-color: #ffffff;
 
-        background: var(--bg-white);
-
-        overflow: hidden;
-
-        transition:
-            transform var(--transition-02),
-            border-color var(--transition-02),
-            box-shadow var(--transition-02);
-
-        @include abstracts.screen(lg) {
-            padding: var(--space-16) var(--space-10);
-        }
-
-        @include abstracts.screen(md) {
-            padding: var(--space-12) var(--space-8);
-        }
-
-        @include abstracts.screen(sm) {
-            padding: var(--space-8) var(--space-4);
-        }
-
-        &:hover {
-            .featured-products__img {
-                transform: scale(1.05);
-                border-color: var(--primary-hover);
-
-                transform: translateY(calc(-1 * var(--space-6)));
-
-                box-shadow: var(--shadow-lg);
-            }
-
-            .featured-products__title {
-                color: var(--primary-dark);
-            }
-
-            .featured-products__redirect {
-                color: var(--primary-dark);
-
-                .featured-products__redirect-icon {
-                    transform: translateX(var(--space-4));
-                }
-            }
-        }
-    }
-
-    &__link {
         display: flex;
         flex-direction: column;
 
         height: 100%;
+        padding: 16px;
+        border-radius: 12px;
 
-        color: inherit;
+        background: var(--product-color);
+        box-shadow: 0px 20px 60px 10px var(--product-card-shadow);
     }
 
-    // =====================================================
-    // IMAGE
-    // =====================================================
+    &__img-wrap {
+        position: relative;
+        padding-top: 100%;
+    }
 
     &__thumb {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        aspect-ratio: 1;
-
-        padding: var(--space-30);
-
-        background: var(--primary-light);
-
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-
+        height: 100%;
         object-fit: contain;
 
-        transition: transform var(--transition-02);
+        background: var(--bg-body);
     }
 
-    // =====================================================
-    // BODY
-    // =====================================================
+    &__like-btn {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
 
     &__body {
-        display: flex;
-        flex: 1;
-        flex-direction: column;
-
-        padding: var(--space-24);
-        background: var(--product-color);
-    }
-
-    &__bg {
-        background: var(--bg-white);
-        height: 100%;
+        background: var(--bg-color);
     }
 
     &__title {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
         text-align: center;
-        margin: var(--space-20) 0;
-
-        font-size: var(--font-size-24r);
-        font-weight: var(--weight-400);
-        line-height: var(--line-height-13);
-
-        transition: color var(--transition-02);
-
-        color: var(--text-color);
-
-        @include abstracts.screen(lg) {
-            font-size: var(--font-size-24r);
-        }
-
-        @include abstracts.screen(md) {
-            font-size: var(--font-size-18r);
-            font-weight: var(--weight-500);
-            line-height: var(--line-height-15);
-        }
     }
 
-    &__info {
-        flex: 1;
+    &__title,
+    &__price,
+    &__score {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 150%;
+        margin: var(--space-16) var(--space-10);
+    }
 
-        margin: var(--space-14);
+    &__brand {
+        min-height: var(--space-70);
+        margin: var(--space-16) var(--space-10) 0;
+        color: #9e9da8;
+        font-size: 1.5rem;
+        line-height: 146.667%;
+    }
 
-        color: var(--text-light);
-
-        font-size: var(--font-size-16r);
-        font-weight: var(--weight-400);
-        line-height: var(--line-height-17);
-        letter-spacing: 0;
-
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-
-        overflow: hidden;
-        text-overflow: ellipsis;
-
-        @include abstracts.screen(lg) {
-            margin: var(--space-12);
-            line-height: var(--line-height-16);
-        }
-
-        @include abstracts.screen(md) {
-            font-size: var(--font-size-15r);
-        }
+    &__row {
+        display: flex;
+        align-items: center;
+        margin-top: auto;
     }
 
     // =====================================================
@@ -325,15 +173,19 @@
         align-items: center;
         gap: var(--space-8);
 
-        margin-left: var(--space-16);
         margin-bottom: var(--space-4);
 
         color: var(--primary-color);
 
-        font-size: var(--font-size-16r);
-        font-weight: var(--weight-500);
-
         transition: color var(--transition-02);
+
+        &:hover {
+            color: var(--primary-hover);
+
+            .featured-products__redirect-icon {
+                transform: translateX(var(--space-4));
+            }
+        }
     }
 
     &__redirect-icon {

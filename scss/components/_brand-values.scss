@@ -5,47 +5,23 @@
 // =========================================================
 
 .brand-values {
-    padding: var(--space-100) 0;
     background: var(--bg-color);
-
-    @include abstracts.screen(xl) {
-        padding: var(--space-80) 0;
-    }
-
-    @include abstracts.screen(lg) {
-        padding: var(--space-64) 0;
-    }
-
-    @include abstracts.screen(md) {
-        padding: var(--space-48) 0;
-    }
-
-    @include abstracts.screen(sm) {
-        padding: var(--space-24) 0;
-    }
 
     &__heading {
         position: relative;
-        margin: var(--space-50);
+        margin: var(--space-32);
         padding-bottom: var(--space-20);
         text-align: center;
-
-        font-size: var(--font-size-30r);
-        font-weight: var(--weight-700);
-        line-height: var(--line-height-15);
 
         color: var(--text-color);
 
         @include abstracts.screen(lg) {
-            font-size: var(--font-size-26r);
+            margin: var(--space-28);
         }
 
         @include abstracts.screen(md) {
-            font-size: var(--font-size-22r);
-        }
-
-        @include abstracts.screen(sm) {
-            font-size: var(--font-size-18r);
+            padding-bottom: var(--space-16);
+            margin: var(--space-24);
         }
 
         &::after {
@@ -68,65 +44,22 @@
 
     &__desc {
         max-width: var(--space-580);
-
-        margin: 0 auto var(--space-50);
+        margin: 0 auto var(--space-64);
         text-align: center;
-
-        font-size: var(--font-size-20r);
-        font-weight: var(--weight-400);
-        line-height: var(--line-height-12);
 
         color: var(--text-light);
 
         @include abstracts.screen(lg) {
             margin-bottom: var(--space-56);
-
-            font-size: var(--font-size-18r);
         }
 
         @include abstracts.screen(md) {
             margin-bottom: var(--space-48);
-
-            font-size: var(--font-size-16r);
         }
 
         @include abstracts.screen(sm) {
             margin-bottom: var(--space-40);
         }
-    }
-
-    &__list {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        //display: grid;
-        //grid-template-columns: repeat(5, 1fr);
-        //column-gap: var(--space-30);
-        //row-gap: var(--space-30);
-        // margin: var(--space-50) var(--space-20);
-        /*
-        @include abstracts.screen(xl) {
-            grid-template-columns: repeat(3, 1fr);
-            column-gap: var(--space-30);
-        }
-
-        @include abstracts.screen(lg) {
-            column-gap: var(--space-20);
-        }
-
-        @include abstracts.screen(md) {
-            grid-template-columns: repeat(2, 1fr);
-
-            column-gap: var(--space-30);
-        }
-
-        @include abstracts.screen(sm) {
-            grid-template-columns: repeat(1, 1fr);
-
-            column-gap: var(--space-10);
-        }
-        */
     }
 
     &__item {
@@ -258,23 +191,10 @@
 
         color: var(--text-color);
 
-        font-size: var(--font-size-24r);
-        font-weight: var(--weight-600);
-        line-height: var(--line-height-14);
-        letter-spacing: 0;
-
         transition: color var(--transition-02);
-
-        @include abstracts.screen(xxl) {
-            font-size: var(--font-size-20r);
-        }
 
         @include abstracts.screen(md) {
             margin-bottom: var(--space-12);
-
-            font-size: var(--font-size-18r);
-
-            line-height: var(--line-height-15);
         }
 
         @include abstracts.screen(sm) {
@@ -289,19 +209,8 @@
 
         color: var(--text-light);
 
-        font-size: var(--font-size-20r);
-        font-weight: var(--weight-400);
-        line-height: var(--line-height-17);
-        letter-spacing: 0;
-
-        @include abstracts.screen(xxl) {
-            font-size: var(--font-size-18r);
-        }
-
         @include abstracts.screen(lg) {
             max-width: 200px;
-
-            line-height: var(--line-height-16);
         }
 
         @include abstracts.screen(md) {
@@ -310,9 +219,6 @@
 
         @include abstracts.screen(sm) {
             max-width: 100%;
-
-            font-size: var(--font-size-16r);
-            line-height: var(--line-height-15);
         }
     }
 }

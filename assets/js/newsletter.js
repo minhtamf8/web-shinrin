@@ -26,13 +26,19 @@ const colors = {
     "black-bean": "#2F2B29",
     almond: "#A8835C",
 };
-
+/*
 document.querySelectorAll(".featured-products__card").forEach((card) => {
     const product = card.dataset.product;
 
     const body = card.querySelector(".featured-products__body");
 
     body.style.setProperty("--product-color", colors[product]);
+});
+*/
+document.querySelectorAll(".featured-products__card").forEach((card) => {
+    const product = card.dataset.product;
+
+    card.style.setProperty("--product-color", colors[product]);
 });
 
 /** language */

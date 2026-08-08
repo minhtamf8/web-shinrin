@@ -5,23 +5,23 @@
 
     overflow: hidden;
 
-    padding: var(--space-100) 0;
+    pading: var(--space-100) 0;
     background: var(--bg-color);
 
     @include abstracts.screen(xl) {
-        padding: var(--space-80) 0;
+        pading: var(--space-80) 0;
     }
 
     @include abstracts.screen(lg) {
-        padding: var(--space-64) 0;
+        pading: var(--space-64) 0;
     }
 
     @include abstracts.screen(md) {
-        padding: var(--space-48) 0;
+        pading: var(--space-48) 0;
     }
 
     @include abstracts.screen(sm) {
-        padding: var(--space-24) 0;
+        pading: var(--space-24) 0;
     }
 
     &__bg {
@@ -55,12 +55,6 @@
     &__content {
         max-width: 560px;
 
-        //display: flex;
-
-        //flex-direction: column;
-
-        //justify-content: center;
-
         padding-left: 30px;
 
         @include abstracts.screen(lg) {
@@ -83,16 +77,7 @@
         margin-bottom: var(--space-20);
 
         color: var(--text-label);
-
-        font-size: var(--font-size-20r);
-        font-weight: var(--weight-600);
-        line-height: 1.5;
-        letter-spacing: var(--letter-spacing02);
         text-transform: uppercase;
-
-        @include abstracts.screen(md) {
-            font-size: var(--font-size-18r);
-        }
 
         @include abstracts.screen(sm) {
             margin-bottom: 16px;
@@ -102,34 +87,13 @@
     &__heading {
         margin-bottom: var(--space-30);
 
-        font-size: var(--font-size-48r);
-        font-weight: var(--weight-600);
-        line-height: var(--line-height-12);
-        letter-spacing: var(--letter-spacing-02);
-
         color: var(--text-color);
-
-        @include abstracts.screen(xl) {
-            font-size: var(--font-size-40r);
-        }
-
-        @include abstracts.screen(lg) {
-            font-size: var(--font-size-32r);
-        }
-
-        @include abstracts.screen(md) {
-            font-size: var(--font-size-28r);
-        }
     }
 
     &__desc {
         max-width: var(--space-220);
 
         margin: var(--space-30) 0;
-
-        font-size: var(--font-size-16r);
-        font-weight: var(--weight-400);
-        line-height: var(--line-height-15);
 
         color: var(--text-light);
     }

@@ -4,17 +4,24 @@
     margin-bottom: 50px;
 
     &__container {
-        margin-top: 40px;
-
-        @include abstracts.screen(md) {
-            margin-top: 30px;
-        }
+        margin-top: 0;
     }
 
-    &__heading {
-        font-size: 2.4rem;
-        font-weight: 700;
-        line-height: 141.667%;
+    &__hero {
+        font-family: var(--font-brand);
+
+        font-size: var(--font-size-48r);
+        font-weight: var(--weight-700);
+        line-height: var(--line-height-11-5);
+        letter-spacing: var(--letter-spacing-02);
+
+        @include abstracts.screen(xl) {
+            font-size: var(--font-size-40r);
+        }
+
+        @include abstracts.screen(md) {
+            font-size: var(--font-size-32r);
+        }
     }
 
     &__cate {
@@ -34,5 +41,71 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 20px;
+    }
+}
+
+.text {
+    &__label {
+        font-size: var(--font-size-14r);
+        font-weight: var(--weight-400);
+        line-height: var(--line-height-14);
+        letter-spacing: var(--letter-spacing0);
+    }
+
+    &__heading {
+        font-family: var(--font-brand);
+
+        font-size: var(--font-size-40r);
+        font-weight: var(--weight-600);
+        line-height: var(--line-height-12);
+        letter-spacing: var(--letter-spacing-02);
+
+        @include abstracts.screen(xl) {
+            font-size: var(--font-size-32r);
+        }
+
+        @include abstracts.screen(md) {
+            font-size: var(--font-size-24r);
+        }
+    }
+
+    &__title {
+        font-family: var(--font-brand);
+
+        font-size: var(--font-size-20r);
+        font-weight: var(--weight-600);
+        line-height: var(--line-height-14);
+        letter-spacing: var(--letter-spacing0);
+
+        @include abstracts.screen(md) {
+            font-size: var(--font-size-18r);
+        }
+    }
+
+    &__link {
+        font-size: var(--font-size-16r);
+        font-weight: var(--weight-500);
+        line-height: var(--line-height-15);
+        letter-spacing: var(--letter-spacing0);
+    }
+}
+
+.section-spacing {
+    padding: var(--space-96) 0;
+
+    @include abstracts.screen(xl) {
+        padding: var(--space-24) 0;
+    }
+
+    @include abstracts.screen(lg) {
+        padding: var(--space-72) 0;
+    }
+
+    @include abstracts.screen(md) {
+        padding: var(--space-20) 0;
+    }
+
+    @include abstracts.screen(sm) {
+        padding: var(--space-16) 0;
     }
 }

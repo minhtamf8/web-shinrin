@@ -56,54 +56,15 @@
         flex-direction: column;
         justify-content: center;
     }
-    /*
-    &__left {
-        height: (calc(var(--hero-view-size) * 0.6)) em;
-        margin-left: (calc(var(--hero-product-width) * 0.1)) em;
 
-        @include abstracts.screen(xl) {
-            height: (calc(var(--hero-view-size) * 0.55)) em;
-            margin-right: 0;
-        }
-
-        @include abstracts.screen(lg) {
-            height: (calc(var(--hero-view-size) * 0.5)) em;
-        }
-
-        @include abstracts.screen(md) {
-            height: (calc(var(--hero-view-size) * 0.45)) em;
-        }
-    }
-    */
     /*======================================================
         Heading
     ======================================================*/
 
     &__heading {
-        font-size: var(--font-size-50r);
-        font-weight: var(--weight-700);
-        line-height: var(--line-height-12);
-
         color: var(--text-color);
 
         animation: fade-up 0.8s forwards;
-
-        @include abstracts.screen(xl) {
-            font-size: var(--font-size-42r);
-        }
-
-        @include abstracts.screen(lg) {
-            font-size: var(--font-size-36r);
-            line-height: var(--line-height-10);
-        }
-
-        @include abstracts.screen(md) {
-            font-size: var(--font-size-30r);
-        }
-
-        @include abstracts.screen(sm) {
-            font-size: var(--font-size-24r);
-        }
     }
 
     /*======================================================
@@ -113,29 +74,12 @@
     &__desc {
         margin: var(--space-30) 0;
 
-        font-size: var(--font-size-20r);
-        font-weight: var(--weight-500);
-        line-height: var(--line-height-15);
-
         color: var(--text-color);
 
         animation: fade-up 0.8s 0.2s forwards;
 
-        @include abstracts.screen(xl) {
-            font-size: var(--font-size-18r);
-        }
-
         @include abstracts.screen(lg) {
             margin: var(--space-20e) 0;
-            line-height: var(--line-height-12);
-        }
-
-        @include abstracts.screen(md) {
-            font-size: var(--font-size-16r);
-        }
-
-        @include abstracts.screen(sm) {
-            line-height: var(--line-height-10);
         }
     }
 
@@ -158,7 +102,7 @@
     &__btn {
         @include abstracts.screen(sm) {
             width: 100%;
-            //max-width: 220px;
+            max-width: 220px;
             justify-content: center;
         }
     }

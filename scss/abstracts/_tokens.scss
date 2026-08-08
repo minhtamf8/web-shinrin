@@ -2,66 +2,68 @@
     // SPACING
     // Khoảng cách chuẩn của Design System
     // Dùng cho margin, padding, gap
-    --space-1: 0.1rem; // Khoảng cách siêu nhỏ
-    --space-2: 0.2rem;
-    --space-3: 0.3rem;
-    --space-4: 0.4rem; // Icon
-    --space-6: 0.6rem; // Label nhỏ
-    --space-8: 0.8rem; // Input nhỏ
-    --space-10: 1rem; // Padding nhỏ
-    --space-12: 1.2rem; // Button nhỏ
-    --space-14: 1.4rem; // Khoảng cách nhỏ
-    --space-16: 1.6rem; // Khoảng cách phổ biến
-    --space-18: 1.8rem; // Khoảng cách vừa
-    --space-20: 2rem; // Card
-    --space-22: 2.2rem; // Khoảng cách lớn
-    --space-24: 2.4rem; // Section nhỏ
-    --space-26: 2.6rem; // Section vừa
-    --space-28: 2.8rem; // Section lớn
-    --space-30: 3rem; // Khoảng cách rất lớn
-    --space-32: 3.2rem; // Block
-    --space-34: 3.4rem; // Block lớn
-    --space-36: 3.6rem; // Block rất lớn
-    --space-38: 3.8rem; // Block cực lớn
-    --space-40: 4rem; // Hero Content
-    --space-42: 4.2rem;
-    --space-44: 4.4rem;
-    --space-48: 4.8rem; // Section
-    --space-50: 5rem;
-    --space-52: 5.2rem;
-    --space-58: 5.8rem;
-    --space-60: 6rem;
-    --space-64: 6.4rem; // Khoảng cách lớn
-    --space-72: 7.2rem;
-    --space-80: 8rem;
-    --space-88: 8.8rem;
-    --space-90: 9rem;
-    --space-100: 10rem;
-    --space-110: 11rem;
-    --space-120: 12rem;
-    --space-124: 12.4rem;
-    --space-129: 12.9rem;
-    --space-130: 13rem;
-    --space-140: 14rem;
-    --space-170: 17rem;
-    --space-172: 17.2rem;
-    --space-176: 17.6rem;
-    --space-180: 18rem;
-    --space-190: 19rem;
-    --space-220: 22rem;
-    --space-278: 27.8rem;
-    --space-288: 28.8rem;
-    --space-294: 29.4rem;
-    --space-298: 29.8rem;
-    --space-326: 32.6rem;
-    --space-470: 47rem;
-    --space-480: 48rem;
-    --space-500: 50rem;
-    --space-520: 52rem;
-    --space-560: 56rem;
-    --space-580: 58rem;
-    --space-620: 62rem;
-    --space-662: 66.2rem;
+    --space-1: 1px; // Khoảng cách siêu nhỏ
+    --space-2: 2px;
+    --space-3: 3px;
+    --space-4: 4px; // Icon
+    --space-6: 6px; // Label nhỏ
+    --space-8: 8px; // Input nhỏ
+    --space-10: 10px; // Padding nhỏ
+    --space-12: 12px; // Button nhỏ
+    --space-14: 14px; // Khoảng cách nhỏ
+    --space-16: 16px; // Khoảng cách phổ biến
+    --space-18: 18px; // Khoảng cách vừa
+    --space-20: 20px; // Card
+    --space-22: 22px; // Khoảng cách lớn
+    --space-24: 24px; // Section nhỏ
+    --space-26: 26px; // Section vừa
+    --space-28: 28px; // Section lớn
+    --space-30: 30px; // Khoảng cách rất lớn
+    --space-32: 32px; // Block
+    --space-34: 34px; // Block lớn
+    --space-36: 36px; // Block rất lớn
+    --space-38: 38px; // Block cực lớn
+    --space-40: 40px; // Hero Content
+    --space-42: 42px;
+    --space-44: 44px;
+    --space-48: 48px; // Section
+    --space-50: 50px;
+    --space-52: 52px;
+    --space-58: 58px;
+    --space-60: 60px;
+    --space-64: 64px; // Khoảng cách lớn
+    --space-70: 70px;
+    --space-72: 72px;
+    --space-80: 80px;
+    --space-88: 88px;
+    --space-96: 96px;
+    --space-90: 90px;
+    --space-100: 100px;
+    --space-110: 110px;
+    --space-120: 120px;
+    --space-124: 124px;
+    --space-129: 129px;
+    --space-130: 130px;
+    --space-140: 140px;
+    --space-170: 170px;
+    --space-172: 172px;
+    --space-176: 176px;
+    --space-180: 180px;
+    --space-190: 190px;
+    --space-220: 220px;
+    --space-278: 278px;
+    --space-288: 288px;
+    --space-294: 294px;
+    --space-298: 298px;
+    --space-326: 326px;
+    --space-470: 470px;
+    --space-480: 480px;
+    --space-500: 500px;
+    --space-520: 520px;
+    --space-560: 560px;
+    --space-580: 580px;
+    --space-620: 62px;
+    --space-662: 66.2px;
 
     // EM
     --space-10e: 1em;
@@ -114,29 +116,15 @@
     --z-index-900: 900;
 
     // FONT SIZE
-    --font-size-4r: 0.4rem;
-    --font-size-5r: 0.5rem;
-    --font-size-6r: 0.6rem;
-    --font-size-8r: 0.8rem;
-    --font-size-10r: 1rem;
-    --font-size-12r: 1.2rem; // Caption
-    --font-size-14r: 1.4rem; // Small Text
-    --font-size-16r: 1.6rem; // Body
-    --font-size-18r: 1.8rem; // Description lớn
-    --font-size-20r: 2rem; // Subtitle
+    --font-size-12r: 1.2rem; // Caption, Copyright, Meta, Date
+    --font-size-14r: 1.4rem; // Label, Helper Text, Small Description
+    --font-size-16r: 1.6rem; // Body, Navigation, Button
+    --font-size-18r: 1.8rem; // Lead Text, Card Description, Intro
+    --font-size-20r: 2rem; // Card Title, Product Name
     --font-size-24r: 2.4rem; // Section Title
-    --font-size-28r: 2.8rem;
-    --font-size-30r: 3rem; // Hero Sub Heading
-    --font-size-32r: 3.2rem;
-    --font-size-36r: 3.6rem;
-    --font-size-38r: 3.8rem; // Hero Heading
-    --font-size-40r: 4rem; // Hero Heading
-    --font-size-48r: 4.8rem;
-    --font-size-50r: 5rem;
-    --font-size-60r: 6rem;
-    --font-size-70r: 7rem;
-    --font-size-80r: 8rem;
-    --font-size-90r: 9rem;
+    --font-size-32r: 3.2rem; // Hero Subtitle, Banner Title
+    --font-size-40r: 4rem; // Hero Title (Tablet/Desktop nhỏ)
+    --font-size-48r: 4.8rem; //Hero Title (Desktop lớn)
 
     // FONT WEIGHT
     --weight-400: 400; // Nội dung thường
@@ -147,18 +135,15 @@
     --weight-900: 900; // Black
 
     // LINE HEIGHT
-    --line-height-08: 0.8;
-    --line-height-10: 1;
-    --line-height-12: 1.2; // Heading
+    --line-height-11-5: 1.15; // Heading
     --line-height-12-5: 1.25; // Heading
     --line-height-13: 1.3; // Body
     --line-height-14: 1.4; // Subtitle
     --line-height-15: 1.5; // Nội dung
     --line-height-16: 1.6;
-    --line-height-17: 1.7; // Blog, News
-    --line-height-18: 1.8;
 
     // LETTER SPACING
+    --letter-spacing-01: -0.01em;
     --letter-spacing-02: -0.02em; // Hero Heading
     --letter-spacing0: 0; // Body
     --letter-spacing02: 0.02em; // Button, Label, Menu
@@ -181,3 +166,16 @@ z-index: auto;
 
 // Thông báo nổi
 --z-toast: 500; */
+
+/*
+| Role          | Font              | Weight | Line-height | Letter-spacing | <576 | 576–768 | 768–992 | 992–1200 | 1200–1440 |
+| ------------- | ----------------- | :----: | :---------: | :------------: | :--: | :-----: | :-----: | :------: | :-------: |
+| Hero Display  | Plus Jakarta Sans |   700  |     1.15    |     -0.02em    |  3.2 |   3.2   |   4.0   |    4.0   |    4.8    |
+| Hero Subtitle | Plus Jakarta Sans |   700  |     1.25    |     -0.01em    |  2.0 |   2.0   |   2.4   |    2.4   |    3.2    |
+| Section Title | Plus Jakarta Sans |   700  |     1.3     |        0       |  2.0 |   2.0   |   2.4   |    2.4   |    2.4    |
+| Card Title    | Plus Jakarta Sans |   600  |     1.4     |        0       |  1.8 |   1.8   |   2.0   |    2.0   |    2.0    |
+| Body          | Inter             |   400  |     1.6     |        0       |  1.6 |   1.6   |   1.6   |    1.6   |    1.6    |
+| Navigation    | Inter             |   500  |     1.5     |        0       |  1.6 |   1.6   |   1.6   |    1.6   |    1.6    |
+| Button        | Inter             |   500  |     1.5     |        0       |  1.6 |   1.6   |   1.6   |    1.6   |    1.6    |
+| Caption       | Inter             |   400  |     1.4     |        0       |  1.2 |   1.2   |   1.2   |    1.2   |    1.2    |
+*/

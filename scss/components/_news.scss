@@ -1,23 +1,23 @@
 @use "../abstracts";
 
 .news {
-    padding: var(--space-100) 0;
+    pading: var(--space-100) 0;
     background: var(--bg-color);
 
     @include abstracts.screen(xl) {
-        padding: var(--space-80) 0;
+        pading: var(--space-80) 0;
     }
 
     @include abstracts.screen(lg) {
-        padding: var(--space-64) 0;
+        pading: var(--space-64) 0;
     }
 
     @include abstracts.screen(md) {
-        padding: var(--space-48) 0;
+        pading: var(--space-48) 0;
     }
 
     @include abstracts.screen(sm) {
-        padding: var(--space-24) 0;
+        pading: var(--space-24) 0;
     }
 
     // =====================================================
@@ -45,42 +45,19 @@
     }
 
     &__label {
-        font-size: var(--font-size-20r);
-        font-weight: var(--weight-500);
-        letter-spacing: var(--letter-spacing-02);
         text-transform: uppercase;
 
         margin: var(--space-20) 0;
 
         color: var(--text-light);
-
-        @include abstracts.screen(lg) {
-            font-size: var(--font-size-18r);
-        }
     }
 
     &__heading {
         max-width: var(--space-480);
 
-        font-size: var(--font-size-48r);
-        font-weight: var(--weight-600);
-        line-height: var(--line-height-12);
-        letter-spacing: var(--letter-spacing-02);
         text-transform: uppercase;
 
         color: var(--text-color);
-
-        @include abstracts.screen(lg) {
-            font-size: var(--font-size-40r);
-        }
-
-        @include abstracts.screen(md) {
-            font-size: var(--font-size-32r);
-        }
-
-        @include abstracts.screen(sm) {
-            font-size: var(--font-size-28r);
-        }
     }
 
     &__cta {
@@ -95,10 +72,6 @@
         white-space: nowrap;
 
         color: var(--primary-color);
-
-        font-size: var(--font-size-20r);
-
-        font-weight: var(--weight-600);
 
         transition: color var(--transition-02);
 
@@ -269,10 +242,6 @@
 
         color: var(--text-color);
 
-        font-size: var(--font-size-18r);
-        font-weight: var(--weight-600);
-        line-height: var(--line-height-15);
-
         transition: color var(--transition-02);
 
         display: -webkit-box;
@@ -296,9 +265,6 @@
         margin-bottom: var(--space-4);
 
         color: var(--primary-color);
-
-        font-size: var(--font-size-16r);
-        font-weight: var(--weight-500);
 
         transition: color var(--transition-02);
     }

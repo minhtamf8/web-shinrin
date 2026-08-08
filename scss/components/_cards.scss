@@ -1,0 +1,41 @@
+@use "../abstracts";
+
+/* ==========================================================
+   COMPONENT: CARD
+   ========================================================== */
+
+.cards {
+    padding: var(--space-32) var(--space-32);
+
+    @include abstracts.screen(md) {
+        padding: var(--space-28) var(--space-24);
+    }
+
+    @include abstracts.screen(sm) {
+        padding: var(--space-24) var(--space-20);
+    }
+
+    &__icon {
+        margin-bottom: 16px;
+
+        @include abstracts.screen(md) {
+            margin-bottom: 24px;
+        }
+
+        @include abstracts.screen(sm) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 12px;
+
+        @include abstracts.screen(sm) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__info {
+        margin: 0;
+    }
+}

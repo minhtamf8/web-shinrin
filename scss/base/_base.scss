@@ -15,8 +15,12 @@ html {
 }
 
 body {
-    font-size: 1.6rem;
     font-family: var(--font-ui);
+    font-size: var(--font-size-16r);
+    font-weight: var(--weight-400);
+    line-height: var(--line-height-16);
+    letter-spacing: var(--letter-spacing0);
+
     color: var(--text-color);
     background: var(--body-bg);
 }
