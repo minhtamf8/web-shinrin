@@ -5,7 +5,7 @@
 // =========================================================
 
 .brand-values {
-    background: var(--bg-color);
+    //background: var(--bg-color);
 
     &__heading {
         position: relative;
@@ -78,6 +78,7 @@
         box-shadow: var(--shadow-md);
 
         text-align: center;
+        background: var(--bg-color);
 
         transition:
             transform var(--transition-02),

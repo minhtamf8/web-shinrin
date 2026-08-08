@@ -1,7 +1,7 @@
 @use "../abstracts";
 
 .featured-products {
-    background: var(--bg-color);
+    background: var(--bg-body);
 
     &__header {
         display: flex;
@@ -95,33 +95,57 @@
     // =====================================================
 
     &__card {
-        --product-color: #ffffff;
+        --product-color: var(--bg-white);
 
         display: flex;
         flex-direction: column;
 
+        width: 100%;
         height: 100%;
-        padding: 16px;
-        border-radius: 12px;
 
-        background: var(--product-color);
-        box-shadow: 0px 20px 60px 10px var(--product-card-shadow);
+        padding: var(--space-20) var(--space-14);
+        overflow: hidden;
+
+        border: var(--space-2) solid var(--bg-shadow);
+        border-radius: var(--radius-12);
+        box-shadow: var(--shadow-md);
+
+        background: var(--bg-color);
+
+        transition:
+            transform var(--transition-02),
+            box-shadow var(--transition-02);
     }
 
     &__img-wrap {
         position: relative;
-        padding-top: 100%;
+
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+
+        border-radius: var(--space-8);
+        background: var(--bg-white);
+
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+        &:hover {
+            transform: translateY(-4px);
+
+            box-shadow: 0 var(--space-12) var(--space-30) rgba(0, 0, 0, 0.12);
+        }
     }
 
     &__thumb {
         position: absolute;
-        top: 0;
-        left: 0;
+        inset: 0;
         width: 100%;
         height: 100%;
         object-fit: contain;
+    }
 
-        background: var(--bg-body);
+    &__card:hover &__thumb {
+        transform: scale(1.05);
     }
 
     &__like-btn {
@@ -131,37 +155,41 @@
     }
 
     &__body {
-        background: var(--bg-color);
-    }
-
-    &__title {
         display: flex;
         flex: 1;
         flex-direction: column;
-        text-align: center;
+
+        margin-top: var(--space-8);
+
+        background: var(--bg-white);
+        border: var(--space-14) solid var(--product-color);
+
+        border-radius: var(--space-8);
     }
 
-    &__title,
-    &__price,
-    &__score {
-        font-size: 1.6rem;
-        font-weight: 500;
-        line-height: 150%;
-        margin: var(--space-16) var(--space-10);
+    &__title {
+        padding: var(--space-10) 0;
+        text-align: center;
+        color: var(--text-color);
     }
 
     &__brand {
-        min-height: var(--space-70);
-        margin: var(--space-16) var(--space-10) 0;
-        color: #9e9da8;
-        font-size: 1.5rem;
-        line-height: 146.667%;
+        display: -webkit-box;
+
+        min-height: var(--space-66);
+        margin: var(--space-10) var(--space-10) 0;
+        color: var(--text-light);
+
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
     }
 
     &__row {
         display: flex;
         align-items: center;
-        margin-top: auto;
+        margin-left: var(--space-10);
+        padding-top: var(--space-10);
     }
 
     // =====================================================
@@ -172,8 +200,6 @@
         display: inline-flex;
         align-items: center;
         gap: var(--space-8);
-
-        margin-bottom: var(--space-4);
 
         color: var(--primary-color);
 

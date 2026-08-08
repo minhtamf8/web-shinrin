@@ -7,23 +7,6 @@
         margin-top: 0;
     }
 
-    &__hero {
-        font-family: var(--font-brand);
-
-        font-size: var(--font-size-48r);
-        font-weight: var(--weight-700);
-        line-height: var(--line-height-11-5);
-        letter-spacing: var(--letter-spacing-02);
-
-        @include abstracts.screen(xl) {
-            font-size: var(--font-size-40r);
-        }
-
-        @include abstracts.screen(md) {
-            font-size: var(--font-size-32r);
-        }
-    }
-
     &__cate {
         --grid-gutter-x: 51px;
 
@@ -45,6 +28,23 @@
 }
 
 .text {
+    &__hero {
+        font-family: var(--font-brand);
+
+        font-size: var(--font-size-48r);
+        font-weight: var(--weight-700);
+        line-height: var(--line-height-11-5);
+        letter-spacing: var(--letter-spacing-02);
+
+        @include abstracts.screen(xl) {
+            font-size: var(--font-size-40r);
+        }
+
+        @include abstracts.screen(md) {
+            font-size: var(--font-size-32r);
+        }
+    }
+
     &__label {
         font-size: var(--font-size-14r);
         font-weight: var(--weight-400);
