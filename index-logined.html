@@ -7,530 +7,687 @@
 
         <!-- favicon -->
         <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
-
         <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
         <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
         <link rel="manifest" href="./assets/favicon/site.webmanifest" />
 
-        <!-- Fonts -->
+        <!-- font -->
         <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
 
-        <!-- Styles -->
+        <!-- style -->
         <link rel="stylesheet" href="./assets/css/main.css" />
 
-        <!-- Scripts -->
+        <!-- scripts -->
         <script src="./assets/js/scripts.js"></script>
     </head>
     <body>
-        <!-- Header -->
+        <!-- header -->
         <header id="header" class="header"></header>
         <script>
             load("#header", "./templates/header-logined.html");
         </script>
 
-        <!-- MAIN -->
-        <main class="container home">
-            <!-- Slideshow -->
-            <div class="home__container">
-                <div class="slideshow">
-                    <div class="slideshow__inner">
-                        <div class="slideshow__item">
-                            <a href="#!" class="slideshow__link">
-                                <picture>
-                                    <source
-                                        media="(max-width: 767.98px)"
-                                        srcset="./assets/img/slideshow/item-1-md.png"
-                                    />
-                                    <img src="./assets/img/slideshow/item-1.png" alt="" class="slideshow__img" />
-                                </picture>
-                            </a>
+        <!--  main  -->
+        <main>
+            <section class="hero">
+                <!-- Background -->
+                <picture class="hero__bg">
+                    <source media="(max-width:575.98px)" srcset="./assets/imgs/hero/hero-bg-mobis576-225.webp" />
+
+                    <source media="(max-width:767.98px)" srcset="./assets/imgs/hero/hero-bg-mobi768-300.webp" />
+
+                    <source media="(max-width:991.98px)" srcset="./assets/imgs/hero/hero-bg-taplet992-388.webp" />
+
+                    <img
+                        class="hero__bg-img"
+                        src="./assets/imgs/hero/hero-bg-pc1440-748.webp"
+                        alt="ShinRin background"
+                    />
+                </picture>
+                <div class="container hero__view">
+                    <!-- Content -->
+                    <div class="hero__content">
+                        <h1 class="hero__heading text__hero">
+                            Nature.<br />
+                            Wellness.<br />
+                            Everyday.
+                        </h1>
+
+                        <p class="hero__desc">
+                            Crafted from pure, natural ingredients, ShinRin creates nourishing drinks that bring balance
+                            to your everyday life.
+                        </p>
+
+                        <div class="text__link hero__actions">
+                            <a href="!#" class="hero__btn btn btn--primary">Explore Menu</a>
+
+                            <a href="!#" class="hero__btn btn btn--outline">Our Philosophy</a>
                         </div>
                     </div>
 
-                    <div class="slideshow__page">
-                        <span class="slideshow__num">1</span>
-                        <span class="slideshow__slider"></span>
-                        <span class="slideshow__num">5</span>
+                    <!-- Product -->
+                    <div class="hero__product">
+                        <div class="hero__glass">
+                            <picture>
+                                <source
+                                    media="(max-width:575.98px)"
+                                    srcset="./assets/imgs/hero/hero-glass-mobis120.webp"
+                                />
+
+                                <source
+                                    media="(max-width:767.98px)"
+                                    srcset="./assets/imgs/hero/hero-glass-mobis120.webp"
+                                />
+
+                                <source
+                                    media="(max-width:991.98px)"
+                                    srcset="./assets/imgs/hero/hero-glass-mobi180.webp"
+                                />
+
+                                <img
+                                    class="hero__glass-img"
+                                    src="./assets/imgs/hero/hero-glass-pc300.webp"
+                                    alt="ShinRin Glass"
+                                />
+                            </picture>
+
+                            <img class="hero__logo" src="./assets/imgs/hero/brand-glass.svg" alt="Logo in glass" />
+
+                            <p class="hero__caption">
+                                ShinRin
+                                <br />
+                                wellness
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <!-- Browse Categories -->
-            <section class="home__container">
-                <div class="home__row">
-                    <h2 class="home__heading">Browse Categories</h2>
+            <!-- =========================================================
+            BRAND VALUES
+            Mục đích:
+            - Giới thiệu nhanh triết lý ShinRin.
+            - Tăng độ tin cậy trước khi vào Menu sản phẩm.
+            ========================================================= -->
+            <section class="container home">
+                <div class="home__container">
+                    <div class="section-spacing brand-values">
+                        <h2 class="brand-values__heading text__heading">What value does it bring?</h2>
+                        <p class="brand-values__desc">
+                            We are 100% committed to our customers and uphold our core values.
+                        </p>
+
+                        <div class="home__cate row row-cols-5 row-cols-xl-3 row-cols-lg-2 row-cols-md-1 g-3">
+                            <div class="col">
+                                <article class="brand-values__item">
+                                    <img
+                                        src="./assets/icons/brand-values/leaf.svg"
+                                        alt="icon leaf"
+                                        class="brand-values__icon"
+                                    />
+
+                                    <h3 class="text__title brand-values__title">Pure Ingredients</h3>
+
+                                    <p class="brand-values__info">Carefully selected from nature, with no additives.</p>
+                                </article>
+                            </div>
+
+                            <div class="col">
+                                <article class="brand-values__item">
+                                    <img
+                                        src="./assets/icons/brand-values/grain.svg"
+                                        alt="icon grain"
+                                        class="brand-values__icon"
+                                    />
+
+                                    <h3 class="text__title brand-values__title">Balanced Nutrition</h3>
+
+                                    <p class="brand-values__info">Provides essential nutrients every day.</p>
+                                </article>
+                            </div>
+
+                            <div class="col">
+                                <article class="brand-values__item">
+                                    <img
+                                        src="./assets/icons/brand-values/cup.svg"
+                                        alt="icon cup"
+                                        class="brand-values__icon"
+                                    />
+
+                                    <h3 class="text__title brand-values__title">Sophisticated Processing</h3>
+
+                                    <p class="brand-values__info">
+                                        Preserves the natural flavors in every batch of products.
+                                    </p>
+                                </article>
+                            </div>
+
+                            <div class="col">
+                                <article class="brand-values__item">
+                                    <img
+                                        src="./assets/icons/brand-values/heart-brandvl.svg"
+                                        alt="icon heart"
+                                        class="brand-values__icon"
+                                    />
+
+                                    <h3 class="text__title brand-values__title">Good for every day</h3>
+
+                                    <p class="brand-values__info">A gentle choice for a healthy lifestyle.</p>
+                                </article>
+                            </div>
+
+                            <div class="col">
+                                <article class="brand-values__item">
+                                    <img
+                                        src="./assets/icons/brand-values/earth.svg"
+                                        alt="icon earth"
+                                        class="brand-values__icon"
+                                    />
+
+                                    <h3 class="text__title brand-values__title">Sustainable living</h3>
+
+                                    <p class="brand-values__info">Walking alongside nature in every product.</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="home__cate row row-cols-3 row-cols-md-1">
-                    <!-- Category item 1 -->
-                    <div class="col">
-                        <a href="#!">
-                            <article class="cate-item">
-                                <img src="./assets/img/category-item/item-1.png" alt="" class="cate-item__thumb" />
-                                <div class="cate-item__info">
-                                    <h3 class="cate-item__title">$24 - $150</h3>
-                                    <p class="cate-item__desc">New sumatra mandeling coffe blend</p>
-                                </div>
-                            </article>
+            </section>
+
+            <!-- =========================================================
+            FEATURED PRODUCTS
+            Sản phẩm nổi bật
+            ========================================================== -->
+            <section class="container home">
+                <div class="home__container">
+                    <div class="featured-products__header section-spacing">
+                        <!-- Left -->
+
+                        <div class="featured-products__content">
+                            <p class="text__label featured-products__label">Featured Drinks</p>
+
+                            <h2 class="text__heading featured-products__heading">
+                                Wholesome choices,<br />
+                                made for you.
+                            </h2>
+                        </div>
+
+                        <!-- Right -->
+
+                        <a href="#!" class="text__link featured-products__cta">
+                            <span>View all drinks</span>
+
+                            <img
+                                src="./assets/icons/featured-arrow-right-48.svg"
+                                alt="Arrow Right"
+                                class="featured-products__cta-icon"
+                            />
                         </a>
                     </div>
 
-                    <!-- Category item 2 -->
-                    <div class="col">
-                        <a href="#!">
-                            <article class="cate-item">
-                                <img src="./assets/img/category-item/item-2.png" alt="" class="cate-item__thumb" />
-                                <div class="cate-item__info">
-                                    <h3 class="cate-item__title">$37 - $160</h3>
-                                    <p class="cate-item__desc">Espresso arabica and robusta beans</p>
-                                </div>
-                            </article>
-                        </a>
-                    </div>
+                    <!-- =======================
+                    PRODUCT LIST
+                    ======================== -->
 
-                    <!-- Category item 3 -->
-                    <div class="col">
-                        <a href="#!">
-                            <article class="cate-item">
-                                <img src="./assets/img/category-item/item-3.png" alt="" class="cate-item__thumb" />
-                                <div class="cate-item__info">
-                                    <h3 class="cate-item__title">$32 - $160</h3>
-                                    <p class="cate-item__desc">Lavazza top class whole bean coffee blend</p>
+                    <div class="row row-cols-5 row-cols-xl-3 row-cols-lg-2 row-cols-md-1 g-3">
+                        <!-- Product card 1 -->
+                        <div class="col">
+                            <article class="featured-products__card" data-product="green-bean">
+                                <div class="featured-products__img-wrap">
+                                    <a href="./product-detail.html">
+                                        <img
+                                            src="./assets/imgs/featured/featured-green bean.png"
+                                            alt="Green Bean Milk"
+                                            class="featured-products__thumb"
+                                        />
+                                    </a>
+                                    <button class="like-btn featured-products__like-btn">
+                                        <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
+                                        <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+                                    </button>
+                                </div>
+                                <div class="featured-products__body">
+                                    <h3 class="featured-products__title text__title">
+                                        <a href="./product-detail.html">Green Bean Milk</a>
+                                    </h3>
+                                    <p class="featured-products__brand u-clamp-3">
+                                        It cools the body, detoxifies, and aids digestion.
+                                    </p>
+                                    <div class="featured-products__row">
+                                        <a href="#!" class="text__link featured-products__redirect">
+                                            <span class="featured-products__price">See details...</span>
+                                            <img
+                                                src="./assets/icons/featured-arrow-right-48.svg"
+                                                alt="Arrow Right"
+                                                class="featured-products__redirect-icon"
+                                            />
+                                        </a>
+                                    </div>
                                 </div>
                             </article>
+                        </div>
+
+                        <!-- Product card 2 -->
+                        <div class="col">
+                            <article class="featured-products__card" data-product="red-bean">
+                                <div class="featured-products__img-wrap">
+                                    <a href="./product-detail.html">
+                                        <img
+                                            src="./assets/imgs/featured/featured-red bean.png"
+                                            alt="Red Bean Milk"
+                                            class="featured-products__thumb"
+                                        />
+                                    </a>
+                                    <button class="like-btn featured-products__like-btn">
+                                        <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
+                                        <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+                                    </button>
+                                </div>
+                                <div class="featured-products__body">
+                                    <h3 class="featured-products__title text__title">
+                                        <a href="./product-detail.html">Red Bean Milk</a>
+                                    </h3>
+                                    <p class="featured-products__brand u-clamp-3">
+                                        Improves blood circulation, beautifies skin, and helps lower blood cholesterol.
+                                    </p>
+                                    <div class="featured-products__row">
+                                        <a href="#!" class="text__link featured-products__redirect">
+                                            <span class="featured-products__price">See details...</span>
+                                            <img
+                                                src="./assets/icons/featured-arrow-right-48.svg"
+                                                alt="Arrow Right"
+                                                class="featured-products__redirect-icon"
+                                            />
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Product card 3 -->
+                        <div class="col">
+                            <article class="featured-products__card" data-product="soy-bean">
+                                <div class="featured-products__img-wrap">
+                                    <a href="./product-detail.html">
+                                        <img
+                                            src="./assets/imgs/featured/featured-soy bean.png"
+                                            alt="Soy Milk"
+                                            class="featured-products__thumb"
+                                        />
+                                    </a>
+                                    <button class="like-btn like-btn--liked featured-products__like-btn">
+                                        <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
+                                        <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+                                    </button>
+                                </div>
+                                <div class="featured-products__body">
+                                    <h3 class="featured-products__title text__title">
+                                        <a href="./product-detail.html">Soy Milk</a>
+                                    </h3>
+                                    <p class="featured-products__brand u-clamp-3">
+                                        Adding plant-based protein is good for cardiovascular health.
+                                    </p>
+                                    <div class="featured-products__row">
+                                        <a href="#!" class="text__link featured-products__redirect">
+                                            <span class="featured-products__price">See details...</span>
+                                            <img
+                                                src="./assets/icons/featured-arrow-right-48.svg"
+                                                alt="Arrow Right"
+                                                class="featured-products__redirect-icon"
+                                            />
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Product card 4 -->
+                        <div class="col">
+                            <article class="featured-products__card" data-product="black-bean">
+                                <div class="featured-products__img-wrap">
+                                    <a href="./product-detail.html">
+                                        <img
+                                            src="./assets/imgs/featured/featured-black bean.png"
+                                            alt="Black Bean Milk"
+                                            class="featured-products__thumb"
+                                        />
+                                    </a>
+                                    <button class="like-btn featured-products__like-btn">
+                                        <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
+                                        <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+                                    </button>
+                                </div>
+                                <div class="featured-products__body">
+                                    <h3 class="featured-products__title text__title">
+                                        <a href="./product-detail.html">Black Bean Milk</a>
+                                    </h3>
+                                    <p class="featured-products__brand u-clamp-3">
+                                        It strengthens the kidneys, promotes urination, and is good for bones and
+                                        joints.
+                                    </p>
+                                    <div class="featured-products__row">
+                                        <a href="#!" class="text__link featured-products__redirect">
+                                            <span class="featured-products__price">See details...</span>
+                                            <img
+                                                src="./assets/icons/featured-arrow-right-48.svg"
+                                                alt="Arrow Right"
+                                                class="featured-products__redirect-icon"
+                                            />
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Product card 5 -->
+                        <div class="col">
+                            <article class="featured-products__card" data-product="almond">
+                                <div class="featured-products__img-wrap">
+                                    <a href="./product-detail.html">
+                                        <img
+                                            src="./assets/imgs/featured/featured-almond.png"
+                                            alt="Almond Milk"
+                                            class="featured-products__thumb"
+                                        />
+                                    </a>
+                                    <button class="like-btn featured-products__like-btn">
+                                        <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
+                                        <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+                                    </button>
+                                </div>
+                                <div class="featured-products__body">
+                                    <h3 class="featured-products__title text__title">
+                                        <a href="./product-detail.html">Almond Milk</a>
+                                    </h3>
+                                    <p class="featured-products__brand u-clamp-3">
+                                        Rich in vitamin E, good for the brain and skin.
+                                    </p>
+                                    <div class="featured-products__row">
+                                        <a href="#!" class="text__link featured-products__redirect">
+                                            <span class="featured-products__price">See details...</span>
+                                            <img
+                                                src="./assets/icons/featured-arrow-right-48.svg"
+                                                alt="Arrow Right"
+                                                class="featured-products__redirect-icon"
+                                            />
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================================================
+             STORY
+            Câu chuyện ShinRin
+            ========================================================= -->
+
+            <section class="story section-spacing">
+                <!-- Background -->
+                <picture class="story__bg">
+                    <source media="(max-width:575.98px)" srcset="./assets/imgs/story/story-bg-sm.png" />
+
+                    <source media="(max-width:767.98px)" srcset="./assets/imgs/story/story-bg-md.png" />
+
+                    <source media="(max-width:991.98px)" srcset="./assets/imgs/story/story-bg-lg.png" />
+
+                    <img class="story__bg-img" src="./assets/imgs/story/story-bg-xl.png" alt="ShinRin background" />
+                </picture>
+
+                <div class="container story__view">
+                    <!-- Content -->
+                    <div class="story__content">
+                        <p class="story__label text__label">Our Story</p>
+
+                        <h2 class="story__heading text__heading">
+                            Rooted in nature,<br />
+                            made with care.
+                        </h2>
+
+                        <p class="story__desc">
+                            Every ingredient begins its journey in carefully selected fields. From sourcing and roasting
+                            to slow cooking, we preserve the natural goodness of every grain to create wholesome drinks
+                            you can enjoy every day.
+                        </p>
+
+                        <a href="#!" class="story__cta btn btn--outline text__link">
+                            <span>Discover Our Story</span>
+
+                            <img
+                                src="./assets/icons/featured-arrow-right-48.svg"
+                                alt="Arrow Right"
+                                class="story__cta-icon"
+                            />
                         </a>
                     </div>
                 </div>
             </section>
 
-            <!-- Browse Products -->
-            <section class="home__container">
-                <div class="home__row">
-                    <h2 class="home__heading">Total LavAzza 1320</h2>
-                    <div class="filter-wrap">
-                        <button class="filter-btn js-toggle" toggle-target="#home-filter">
-                            Filter
-                            <img src="./assets/icons/filter.svg" alt="" class="filter-btn__icon icon" />
-                        </button>
+            <!-- =========================================================
+            NEWS
+            Tin tức & Kiến thức
+            ========================================================= -->
 
-                        <div id="home-filter" class="filter hide">
-                            <img src="./assets/icons/arrow-up.png" alt="" class="filter__arrow" />
-                            <h3 class="filter__heading">Filter</h3>
-                            <form action="" class="filter__form form">
-                                <div class="filter__row filter__content">
-                                    <!-- Filter column 1 -->
-                                    <div class="filter__col">
-                                        <label for="" class="form__label">Price</label>
-                                        <div class="filter__form-group">
-                                            <div
-                                                class="filter__form-slider"
-                                                style="--min-value: 10%; --max-value: 60%"
-                                            ></div>
-                                        </div>
-                                        <div class="filter__form-group filter__form-group--inline">
-                                            <div>
-                                                <label for="" class="form__label form__label--small"> Minimum </label>
-                                                <div class="filter__form-text-input filter__form-text-input--small">
-                                                    <input
-                                                        type="text"
-                                                        name=""
-                                                        id=""
-                                                        class="filter__form-input"
-                                                        value="$30.00"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <label for="" class="form__label form__label--small"> Maximum </label>
-                                                <div class="filter__form-text-input filter__form-text-input--small">
-                                                    <input
-                                                        type="text"
-                                                        name=""
-                                                        id=""
-                                                        class="filter__form-input"
-                                                        value="$100.00"
-                                                    />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+            <section class="container home">
+                <div class="news__container">
+                    <div class="news__header section-spacing">
+                        <div class="news__content">
+                            <p class="news__label text__label">Latest News</p>
 
-                                    <div class="filter__separate"></div>
-
-                                    <!-- Filter column 2 -->
-                                    <div class="filter__col">
-                                        <label for="" class="form__label">Size/Weight</label>
-                                        <div class="filter__form-group">
-                                            <div class="form__select-wrap">
-                                                <div class="form__select" style="--width: 158px">
-                                                    500g
-                                                    <img
-                                                        src="./assets/icons/select-arrow.svg"
-                                                        alt=""
-                                                        class="form__select-arrow icon"
-                                                    />
-                                                </div>
-                                                <div class="form__select">
-                                                    Gram
-                                                    <img
-                                                        src="./assets/icons/select-arrow.svg"
-                                                        alt=""
-                                                        class="form__select-arrow icon"
-                                                    />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="filter__form-group">
-                                            <div class="form__tags">
-                                                <button class="form__tag">Small</button>
-                                                <button class="form__tag">Medium</button>
-                                                <button class="form__tag">Large</button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="filter__separate"></div>
-
-                                    <!-- Filter column 3 -->
-                                    <div class="filter__col">
-                                        <label for="" class="form__label">Brand</label>
-                                        <div class="filter__form-group">
-                                            <div class="filter__form-text-input">
-                                                <input
-                                                    type="text"
-                                                    name=""
-                                                    id=""
-                                                    placeholder="Search brand name"
-                                                    class="filter__form-input"
-                                                />
-                                                <img
-                                                    src="./assets/icons/search.svg"
-                                                    alt=""
-                                                    class="filter__form-input-icon icon"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div class="filter__form-group">
-                                            <div class="form__tags">
-                                                <button class="form__tag">Lavazza</button>
-                                                <button class="form__tag">Nescafe</button>
-                                                <button class="form__tag">Starbucks</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="filter__row filter__footer">
-                                    <button class="btn btn--text filter__cancel js-toggle" toggle-target="#home-filter">
-                                        Cancel
-                                    </button>
-                                    <button
-                                        class="btn btn--primary filter__submit js-toggle"
-                                        toggle-target="#home-filter"
-                                    >
-                                        Show Result
-                                    </button>
-                                </div>
-                            </form>
+                            <h2 class="news__heading text__heading">
+                                Inspiration for<br />
+                                a better you.
+                            </h2>
                         </div>
-                    </div>
-                </div>
 
-                <div class="row row-cols-4 row-cols-lg-2 row-cols-sm-1 g-3">
-                    <!-- Product card 1 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__img-wrap">
-                                <a href="./product-detail.html">
-                                    <img src="./assets/img/product/item-1.png" alt="" class="product-card__thumb" />
-                                </a>
-                                <button class="like-btn product-card__like-btn">
-                                    <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
-                                    <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
-                                </button>
-                            </div>
-                            <h3 class="product-card__title">
-                                <a href="./product-detail.html">Coffee Beans - Espresso Arabica and Robusta Beans</a>
-                            </h3>
-                            <p class="product-card__brand">Lavazza</p>
-                            <div class="product-card__row">
-                                <span class="product-card__price">$47.00</span>
-                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                <span class="product-card__score">4.3</span>
-                            </div>
+                        <a href="!#" class="news__cta text__link">
+                            <span>View all articles</span>
+
+                            <img
+                                src="./assets/icons/featured-arrow-right-48.svg"
+                                alt="Arrow Right"
+                                class="news__cta-icon"
+                            />
+                        </a>
+                    </div>
+
+                    <div class="news__list">
+                        <!-- =====================
+                        blog 01
+                        ====================== -->
+                        <article class="news__card">
+                            <a href="#!" class="news__link">
+                                <div class="news__thumb">
+                                    <img
+                                        src="./assets/imgs/news/energy-balance.webp"
+                                        alt="energy and balance"
+                                        class="news__img"
+                                    />
+                                </div>
+
+                                <div class="news__body">
+                                    <div class="news__meta">
+                                        <span class="news__category">Wellness</span>
+
+                                        <span class="news__dot"></span>
+
+                                        <time class="news__date"> May 20, 2026 </time>
+                                    </div>
+
+                                    <h3 class="text__title news__title">
+                                        Build a healthier daily routine with nutritious grain drinks.
+                                    </h3>
+
+                                    <div class="news__redirect">
+                                        <span>Read article</span>
+
+                                        <img
+                                            src="./assets/icons/featured-arrow-right-48.svg"
+                                            alt="Arrow Right"
+                                            class="news__redirect-icon"
+                                        />
+                                    </div>
+                                </div>
+                            </a>
                         </article>
-                    </div>
 
-                    <!-- Product card 2 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__img-wrap">
-                                <a href="./product-detail.html">
-                                    <img src="./assets/img/product/item-2.png" alt="" class="product-card__thumb" />
-                                </a>
-                                <button class="like-btn product-card__like-btn">
-                                    <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
-                                    <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
-                                </button>
-                            </div>
-                            <h3 class="product-card__title">
-                                <a href="./product-detail.html">Lavazza Coffee Blends - Try the Italian Espresso</a>
-                            </h3>
-                            <p class="product-card__brand">Lavazza</p>
-                            <div class="product-card__row">
-                                <span class="product-card__price">$53.00</span>
-                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                <span class="product-card__score">3.4</span>
-                            </div>
+                        <!-- =====================
+                        blog 02
+                        ====================== -->
+
+                        <article class="news__card">
+                            <a href="#!" class="news__link">
+                                <div class="news__thumb">
+                                    <img src="./assets/imgs/news/beans.webp" alt="green beans" class="news__img" />
+                                </div>
+
+                                <div class="news__body">
+                                    <div class="news__meta">
+                                        <span class="news__category">Nutrition</span>
+
+                                        <span class="news__dot"></span>
+
+                                        <time class="news__date"> May 15, 2026 </time>
+                                    </div>
+
+                                    <h3 class="text__title news__title">
+                                        Why mung beans are one of nature's most complete foods.
+                                    </h3>
+
+                                    <div class="news__redirect">
+                                        <span>Read article</span>
+
+                                        <img
+                                            src="./assets/icons/featured-arrow-right-48.svg"
+                                            alt="Arrow Right"
+                                            class="news__redirect-icon"
+                                        />
+                                    </div>
+                                </div>
+                            </a>
                         </article>
-                    </div>
 
-                    <!-- Product card 3 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__img-wrap">
-                                <a href="./product-detail.html">
-                                    <img src="./assets/img/product/item-3.png" alt="" class="product-card__thumb" />
-                                </a>
-                                <button class="like-btn like-btn--liked product-card__like-btn">
-                                    <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
-                                    <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
-                                </button>
-                            </div>
-                            <h3 class="product-card__title">
-                                <a href="./product-detail.html">Lavazza - Caffè Espresso Black Tin - Ground coffee</a>
-                            </h3>
-                            <p class="product-card__brand">Welikecoffee</p>
-                            <div class="product-card__row">
-                                <span class="product-card__price">$99.99</span>
-                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                <span class="product-card__score">5.0</span>
-                            </div>
+                        <!-- =====================
+                        blog 03
+                        ====================== -->
+
+                        <article class="news__card">
+                            <a href="#!" class="news__link">
+                                <div class="news__thumb">
+                                    <img src="./assets/imgs/news/water.webp" alt="Water" class="news__img" />
+                                </div>
+
+                                <div class="news__body">
+                                    <div class="news__meta">
+                                        <span class="news__category">Recipes</span>
+
+                                        <span class="news__dot"></span>
+
+                                        <time class="news__date"> May 10, 2026 </time>
+                                    </div>
+
+                                    <h3 class="text__title news__title">
+                                        Three delicious ShinRin recipes you can make at home.
+                                    </h3>
+
+                                    <div class="news__redirect">
+                                        <span>Read article</span>
+
+                                        <img
+                                            src="./assets/icons/featured-arrow-right-48.svg"
+                                            alt="Arrow Right"
+                                            class="news__redirect-icon"
+                                        />
+                                    </div>
+                                </div>
+                            </a>
                         </article>
-                    </div>
 
-                    <!-- Product card 4 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__img-wrap">
-                                <a href="./product-detail.html">
-                                    <img src="./assets/img/product/item-4.png" alt="" class="product-card__thumb" />
-                                </a>
-                                <button class="like-btn product-card__like-btn">
-                                    <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
-                                    <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
-                                </button>
-                            </div>
-                            <h3 class="product-card__title">
-                                <a href="./product-detail.html">Qualità Oro Mountain Grown - Espresso Coffee Beans</a>
-                            </h3>
-                            <p class="product-card__brand">Lavazza</p>
-                            <div class="product-card__row">
-                                <span class="product-card__price">$38.65</span>
-                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                <span class="product-card__score">4.4</span>
-                            </div>
-                        </article>
-                    </div>
+                        <!-- =====================
+                        blog 04
+                        ====================== -->
 
-                    <!-- Product card 5 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__img-wrap">
-                                <a href="./product-detail.html">
-                                    <img src="./assets/img/product/item-1.png" alt="" class="product-card__thumb" />
-                                </a>
-                                <button class="like-btn product-card__like-btn">
-                                    <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
-                                    <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
-                                </button>
-                            </div>
-                            <h3 class="product-card__title">
-                                <a href="./product-detail.html">Coffee Beans - Espresso Arabica and Robusta Beans</a>
-                            </h3>
-                            <p class="product-card__brand">Lavazza</p>
-                            <div class="product-card__row">
-                                <span class="product-card__price">$47.00</span>
-                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                <span class="product-card__score">4.3</span>
-                            </div>
-                        </article>
-                    </div>
+                        <article class="news__card">
+                            <a href="#!" class="news__link">
+                                <div class="news__thumb">
+                                    <img src="./assets/imgs/news/discorver.webp" alt="Water" class="news__img" />
+                                </div>
 
-                    <!-- Product card 6 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__img-wrap">
-                                <a href="./product-detail.html">
-                                    <img src="./assets/img/product/item-2.png" alt="" class="product-card__thumb" />
-                                </a>
-                                <button class="like-btn product-card__like-btn">
-                                    <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
-                                    <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
-                                </button>
-                            </div>
-                            <h3 class="product-card__title">
-                                <a href="./product-detail.html">Lavazza Coffee Blends - Try the Italian Espresso</a>
-                            </h3>
-                            <p class="product-card__brand">Lavazza</p>
-                            <div class="product-card__row">
-                                <span class="product-card__price">$53.00</span>
-                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                <span class="product-card__score">3.4</span>
-                            </div>
-                        </article>
-                    </div>
+                                <div class="news__body">
+                                    <div class="news__meta">
+                                        <span class="news__category">nature around us</span>
 
-                    <!-- Product card 7 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__img-wrap">
-                                <a href="./product-detail.html">
-                                    <img src="./assets/img/product/item-3.png" alt="" class="product-card__thumb" />
-                                </a>
-                                <button class="like-btn like-btn--liked product-card__like-btn">
-                                    <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
-                                    <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
-                                </button>
-                            </div>
-                            <h3 class="product-card__title">
-                                <a href="./product-detail.html">Lavazza - Caffè Espresso Black Tin - Ground coffee</a>
-                            </h3>
-                            <p class="product-card__brand">Welikecoffee</p>
-                            <div class="product-card__row">
-                                <span class="product-card__price">$99.99</span>
-                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                <span class="product-card__score">5.0</span>
-                            </div>
-                        </article>
-                    </div>
+                                        <span class="news__dot"></span>
 
-                    <!-- Product card 8 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__img-wrap">
-                                <a href="./product-detail.html">
-                                    <img src="./assets/img/product/item-4.png" alt="" class="product-card__thumb" />
-                                </a>
-                                <button class="like-btn product-card__like-btn">
-                                    <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
-                                    <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
-                                </button>
-                            </div>
-                            <h3 class="product-card__title">
-                                <a href="./product-detail.html">Qualità Oro Mountain Grown - Espresso Coffee Beans</a>
-                            </h3>
-                            <p class="product-card__brand">Lavazza</p>
-                            <div class="product-card__row">
-                                <span class="product-card__price">$38.65</span>
-                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                <span class="product-card__score">4.4</span>
-                            </div>
-                        </article>
-                    </div>
+                                        <time class="news__date"> May 08, 2026 </time>
+                                    </div>
 
-                    <!-- Product card 9 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__img-wrap">
-                                <a href="./product-detail.html">
-                                    <img src="./assets/img/product/item-1.png" alt="" class="product-card__thumb" />
-                                </a>
-                                <button class="like-btn product-card__like-btn">
-                                    <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
-                                    <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
-                                </button>
-                            </div>
-                            <h3 class="product-card__title">
-                                <a href="./product-detail.html">Coffee Beans - Espresso Arabica and Robusta Beans</a>
-                            </h3>
-                            <p class="product-card__brand">Lavazza</p>
-                            <div class="product-card__row">
-                                <span class="product-card__price">$47.00</span>
-                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                <span class="product-card__score">4.3</span>
-                            </div>
-                        </article>
-                    </div>
+                                    <h3 class="text__title news__title">
+                                        Step into nature's embrace, immerse yourself in its quiet beauty, and let your
+                                        body return to its natural balance.
+                                    </h3>
 
-                    <!-- Product card 10 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__img-wrap">
-                                <a href="./product-detail.html">
-                                    <img src="./assets/img/product/item-2.png" alt="" class="product-card__thumb" />
-                                </a>
-                                <button class="like-btn product-card__like-btn">
-                                    <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
-                                    <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
-                                </button>
-                            </div>
-                            <h3 class="product-card__title">
-                                <a href="./product-detail.html">Lavazza Coffee Blends - Try the Italian Espresso</a>
-                            </h3>
-                            <p class="product-card__brand">Lavazza</p>
-                            <div class="product-card__row">
-                                <span class="product-card__price">$53.00</span>
-                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                <span class="product-card__score">3.4</span>
-                            </div>
-                        </article>
-                    </div>
+                                    <div class="news__redirect">
+                                        <span>Read article</span>
 
-                    <!-- Product card 11 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__img-wrap">
-                                <a href="./product-detail.html">
-                                    <img src="./assets/img/product/item-3.png" alt="" class="product-card__thumb" />
-                                </a>
-                                <button class="like-btn like-btn--liked product-card__like-btn">
-                                    <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
-                                    <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
-                                </button>
-                            </div>
-                            <h3 class="product-card__title">
-                                <a href="./product-detail.html">Lavazza - Caffè Espresso Black Tin - Ground coffee</a>
-                            </h3>
-                            <p class="product-card__brand">Welikecoffee</p>
-                            <div class="product-card__row">
-                                <span class="product-card__price">$99.99</span>
-                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                <span class="product-card__score">5.0</span>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- Product card 12 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__img-wrap">
-                                <a href="./product-detail.html">
-                                    <img src="./assets/img/product/item-4.png" alt="" class="product-card__thumb" />
-                                </a>
-                                <button class="like-btn product-card__like-btn">
-                                    <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
-                                    <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
-                                </button>
-                            </div>
-                            <h3 class="product-card__title">
-                                <a href="./product-detail.html">Qualità Oro Mountain Grown - Espresso Coffee Beans</a>
-                            </h3>
-                            <p class="product-card__brand">Lavazza</p>
-                            <div class="product-card__row">
-                                <span class="product-card__price">$38.65</span>
-                                <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                <span class="product-card__score">4.4</span>
-                            </div>
+                                        <img
+                                            src="./assets/icons/featured-arrow-right-48.svg"
+                                            alt="Arrow Right"
+                                            class="news__redirect-icon"
+                                        />
+                                    </div>
+                                </div>
+                            </a>
                         </article>
                     </div>
                 </div>
             </section>
         </main>
 
-        <!-- Footer -->
-        <footer id="footer" class="footer"></footer>
+        <!-- footer -->
+        <footer id="footer" class="footer">footer</footer>
         <script>
             load("#footer", "./templates/footer.html");
         </script>
+
+        <!-- modal -->
+        <div class="newsletter-modal">
+            <div class="newsletter-overlay"></div>
+
+            <div class="newsletter-content">
+                <button class="newsletter-close">×</button>
+
+                <div class="newsletter-left">
+                    <img src="./assets/imgs/modal/modal crop.png" alt="" />
+                </div>
+
+                <div class="newsletter-right">
+                    <span class="newsletter-label"> SHINRIN WELLNESS </span>
+
+                    <h2 class="newsletter-title">Get special offers and new mix recipes every week.</h2>
+
+                    <p class="newsletter-desc">
+                        Sign up to receive special offers on nutritious drinks and updates on new flavors from ShinRin.
+                    </p>
+
+                    <div class="form__group">
+                        <div class="form__text-input">
+                            <input type="email" name="" id="" placeholder="Email" class="form__input" required />
+                            <img src="./assets/icons/message.svg" alt="" class="form__input-icon" />
+                            <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                        </div>
+                        <p class="form__error">The email address you just entered is incorrect. Please check again.</p>
+
+                        <button type="submit" class="btn btn--primary js-newsletter-group">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./assets/js/newsletter.js"></script>
+        <!-- <script src="./assets/js/hero-engine.js"></script> -->
     </body>
 </html>
